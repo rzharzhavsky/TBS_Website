@@ -2,7 +2,7 @@ export const SITE = {
   name: "Temple Beth Sholom",
   tagline: "A Warm, Vibrant Reform Jewish Community in Rockland County",
   shortName: "TBS",
-  url: "https://tbs-rockland.vercel.app",
+  url: "https://tbsrockland.org",
 } as const;
 
 export const CONTACT = {
@@ -17,8 +17,8 @@ export const CONTACT = {
 
 export const SOCIAL = {
   facebook: "https://www.facebook.com/TBSNewCityNY/",
-  instagram: "https://www.instagram.com/tbs.rockland/",
-  instagramHandle: "@tbs.rockland",
+  instagram: "https://www.instagram.com/rockland.tbs/",
+  instagramHandle: "@rockland.tbs",
   youtube: "https://www.youtube.com/@tbsrockland",
   podcast: "Spiritually Speaking by Temple Beth Sholom",
 } as const;
@@ -55,4 +55,5 @@ export const NAV_ITEMS = [
   { label: "Music & Community", href: "/music-community" },
   { label: "Gallery", href: "/gallery" },
   { label: "Clergy & Staff", href: "/clergy-staff" },
+  { label: "Contact", href: "/contact" },
 ] as const;

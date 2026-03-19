@@ -48,7 +48,7 @@ export default function ClergyStaffPage() {
           alt="The clergy and staff of Temple Beth Sholom"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
         />
         <div className="hero-overlay absolute inset-0" />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 md:pb-20">
@@ -84,7 +84,7 @@ export default function ClergyStaffPage() {
                           alt={`Portrait of ${person.name}`}
                           fill
                           sizes="(max-width: 1024px) 100vw, 50vw"
-                          className="object-cover"
+                          className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
                         />
                       </div>
                     </div>
@@ -126,7 +126,7 @@ export default function ClergyStaffPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto">
               {staff.map((person) => (
                 <article
                   key={person.name}
@@ -138,7 +138,7 @@ export default function ClergyStaffPage() {
                       alt={`Portrait of ${person.name}`}
                       fill
                       sizes="(max-width: 640px) 100vw, 50vw"
-                      className="object-cover"
+                      className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
                     />
                   </div>
                   <div className="p-6 text-center">

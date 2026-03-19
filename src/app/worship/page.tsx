@@ -30,7 +30,7 @@ export default function WorshipPage() {
           src="/images/shabbat/candle-lighting.jpg"
           alt="A couple lights Shabbat candles together under the chuppah at Temple Beth Sholom"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_65%] sm:object-[center_60%]"
           priority
           sizes="100vw"
         />
@@ -53,6 +53,56 @@ export default function WorshipPage() {
                 Service Details
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Highlights Icons */}
+      <section className="py-10 md:py-14 bg-warm-50 border-b border-warm-200">
+        <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {[
+              {
+                label: "Candle Lighting",
+                icon: (
+                  <svg className="w-7 h-7 text-tbs-gold-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.047 8.287 8.287 0 009 9.601a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 18a3.75 3.75 0 00.495-7.468 5.99 5.99 0 00-1.925 3.547 5.975 5.975 0 01-2.133-1.001A3.75 3.75 0 0012 18z" />
+                  </svg>
+                ),
+              },
+              {
+                label: "Torah & Prayer",
+                icon: (
+                  <svg className="w-7 h-7 text-tbs-gold-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                  </svg>
+                ),
+              },
+              {
+                label: "Music & Song",
+                icon: (
+                  <svg className="w-7 h-7 text-tbs-gold-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" />
+                  </svg>
+                ),
+              },
+              {
+                label: "Every Friday",
+                icon: (
+                  <svg className="w-7 h-7 text-tbs-gold-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                  </svg>
+                ),
+              },
+            ].map((item) => (
+              <div key={item.label} className="flex flex-col items-center text-center gap-3">
+                <div className="w-14 h-14 rounded-full bg-tbs-gold-100 flex items-center justify-center">
+                  {item.icon}
+                </div>
+                <p className="text-sm font-semibold text-tbs-blue-800">{item.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -133,10 +183,10 @@ export default function WorshipPage() {
 
               <div className="mt-8 aspect-[4/3] rounded-2xl overflow-hidden relative">
                 <Image
-                  src="/images/shabbat/cantor-singing.jpg"
-                  alt="Cantor Anna Zhar singing joyfully at the keyboard during Shabbat services"
+                  src="/images/events/High holidays.JPG"
+                  alt="Cantor Anna leading the choir in white robes during High Holiday services"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -148,10 +198,11 @@ export default function WorshipPage() {
       {/* Photo break */}
       <section className="relative h-[30vh] sm:h-[40vh] md:h-[50vh] overflow-hidden">
         <Image
-          src="/images/shabbat/shabbat-6790.jpg"
-          alt="A joyful moment during the Torah procession at TBS"
+          src="/images/events/IMG_3633.jpg"
+          alt="Rabbi Doug smiling warmly while holding the Torah scroll"
           fill
-          className="object-cover object-center"
+          quality={90}
+          className="object-cover object-[center_40%] sm:object-[center_30%] md:object-[center_25%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-tbs-blue-900/30" />
@@ -200,7 +251,7 @@ export default function WorshipPage() {
           src="/images/shabbat/shabbat-6805.jpg"
           alt="Community members share Torah during Shabbat services"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_55%] sm:object-[center_50%] md:object-[center_45%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-tbs-blue-900/90 to-tbs-blue-800/80" />

@@ -24,71 +24,86 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm"
-          : "bg-white/80 backdrop-blur-sm"
+          ? "bg-white/97 backdrop-blur-lg shadow-[0_1px_3px_rgba(0,0,0,0.06)]"
+          : "bg-white"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 sm:h-20 items-center justify-between">
+      {/* Top bar with logo and CTA */}
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="flex h-16 lg:h-[72px] items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 shrink-0">
+          <Link href="/" className="flex items-center gap-3 shrink-0 group">
             <Image
               src="/images/logos/tbs-logo.png"
               alt="Temple Beth Sholom"
-              width={44}
-              height={44}
-              className="rounded-full"
+              width={40}
+              height={40}
+              className="rounded-full group-hover:scale-105 transition-transform duration-300"
             />
-            <div className="hidden sm:block">
-              <span className="text-lg font-bold font-[family-name:var(--font-heading)] text-tbs-blue-700">
-                Temple Beth Sholom
-              </span>
-            </div>
+            <span className="hidden sm:block text-[17px] font-semibold tracking-[-0.01em] font-[family-name:var(--font-heading)] text-tbs-blue-800">
+              Temple Beth Sholom
+            </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-0.5">
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`px-3 py-2 text-[13px] font-medium rounded-lg transition-colors ${
-                  pathname === item.href
-                    ? "text-tbs-blue-700 bg-tbs-blue-50"
-                    : "text-gray-600 hover:text-tbs-blue-700 hover:bg-gray-50"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+          {/* Desktop: CTA + hamburger hidden on xl */}
+          <div className="hidden xl:flex items-center gap-4">
             <Link
               href="/join-donate"
-              className={`ml-2 px-5 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
+              className={`px-6 py-2.5 text-[13px] font-semibold tracking-wide uppercase rounded-full transition-all duration-300 ${
                 pathname === "/join-donate"
                   ? "bg-tbs-blue-800 text-white"
-                  : "bg-tbs-blue-700 text-white hover:bg-tbs-blue-800 shadow-sm hover:shadow-md"
+                  : "bg-tbs-blue-700 text-white hover:bg-tbs-blue-800 hover:shadow-md"
               }`}
             >
               Join / Donate
             </Link>
-          </nav>
+          </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="xl:hidden p-2.5 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
+            className="xl:hidden p-2 rounded-full text-gray-500 hover:text-tbs-blue-700 hover:bg-gray-50 transition-all"
             aria-label="Toggle menu"
           >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               {mobileOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 9h16.5M3.75 15.75h16.5" />
               )}
             </svg>
           </button>
+        </div>
+      </div>
+
+      {/* Desktop Navigation Bar */}
+      <div className={`hidden xl:block border-t transition-colors duration-300 ${
+        scrolled ? "border-gray-100" : "border-gray-100"
+      }`}>
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <nav className="flex items-center justify-center gap-1 h-11">
+            {NAV_ITEMS.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`relative px-3.5 py-1.5 text-[13px] font-medium tracking-[0.01em] rounded-md transition-all duration-200 ${
+                    isActive
+                      ? "text-tbs-blue-700"
+                      : "text-gray-500 hover:text-tbs-blue-700"
+                  }`}
+                >
+                  {item.label}
+                  {isActive && (
+                    <span className="absolute bottom-[-9px] left-1/2 -translate-x-1/2 w-5 h-[2px] bg-tbs-blue-600 rounded-full" />
+                  )}
+                </Link>
+              );
+            })}
+          </nav>
         </div>
       </div>
 

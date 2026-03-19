@@ -46,7 +46,7 @@ export default function ReligiousSchoolPage() {
           src="/images/holidays/holidays-7249.jpg"
           alt="Young people on the bimah during a service at Temple Beth Sholom"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_45%] sm:object-[center_40%] md:object-[center_35%]"
           priority
           sizes="100vw"
         />
@@ -212,10 +212,10 @@ export default function ReligiousSchoolPage() {
 
               <div className="mt-8 aspect-[4/3] rounded-2xl overflow-hidden relative">
                 <Image
-                  src="/images/holidays/holidays-7302.jpg"
-                  alt="Children participating in a holiday celebration at Temple Beth Sholom"
+                  src="/images/events/Tezza-6405.JPG"
+                  alt="Cantor Anna smiling warmly with guitar surrounded by children"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -278,13 +278,96 @@ export default function ReligiousSchoolPage() {
         </div>
       </section>
 
+      {/* B'nai Mitzvah */}
+      <section id="bnai-mitzvah" className="py-16 md:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">
+                A Sacred Milestone
+              </p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-8">
+                B&apos;nai Mitzvah
+              </h2>
+              <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+                <p>
+                  Becoming a Bar or Bat Mitzvah is one of the most meaningful moments in a
+                  young person&apos;s Jewish journey. At Temple Beth Sholom, we guide each
+                  student with care, warmth, and personal attention as they prepare to lead
+                  the congregation in worship and take their place in the Jewish community.
+                </p>
+                <p>
+                  Our program blends Hebrew skills, Torah study, and personal growth. Each
+                  student works closely with Rabbi Doug and Cantor Anna to prepare their
+                  Torah and Haftarah portions, and develops a meaningful community service
+                  project that connects Jewish values to real-world action.
+                </p>
+              </div>
+
+              <div className="mt-8 space-y-3">
+                {[
+                  { text: "Personalized Torah and Haftarah preparation", detail: "One-on-one guidance with our clergy" },
+                  { text: "Hebrew reading and prayer skills", detail: "Building confidence at every level" },
+                  { text: "Community service project", detail: "Tikkun olam in action" },
+                  { text: "Leading Shabbat services", detail: "A proud moment for the whole family" },
+                ].map((item) => (
+                  <div
+                    key={item.text}
+                    className="flex items-start gap-3 p-4 rounded-xl bg-warm-50 border border-warm-100"
+                  >
+                    <div className="w-6 h-6 rounded-full bg-tbs-mint-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg
+                        className="w-3.5 h-3.5 text-tbs-blue-700"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2.5}
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M4.5 12.75l6 6 9-13.5"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-gray-900 font-medium">{item.text}</p>
+                      <p className="text-gray-500 text-sm">{item.detail}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8">
+                <a
+                  href={`mailto:${CONTACT.email}?subject=B'nai Mitzvah Inquiry`}
+                  className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-tbs-blue-700 text-white hover:bg-tbs-blue-800 transition-all duration-300 shadow-lg"
+                >
+                  Learn More About Our Program
+                </a>
+              </div>
+            </div>
+
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/gallery/IMG_3634.JPG"
+                alt="Rabbi Doug holding the Torah scroll with a young community member during a service"
+                fill
+                className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="relative py-16 md:py-24 overflow-hidden">
         <Image
           src="/images/holidays/holidays-7606.jpg"
           alt="A joyful moment during a holiday program at TBS"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-tbs-blue-900/90 to-tbs-blue-800/80" />

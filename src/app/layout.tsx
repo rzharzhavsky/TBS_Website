@@ -40,7 +40,7 @@ export const metadata: Metadata = {
       "A warm, vibrant Reform Jewish community in Rockland County, NY.",
   },
   alternates: {
-    canonical: "https://tbs-rockland.vercel.app",
+    canonical: "https://tbsrockland.org",
   },
   other: {
     "geo.region": "US-NY",
@@ -55,7 +55,7 @@ const jsonLd = {
   alternateName: "TBS Rockland",
   description:
     "A warm, vibrant Reform Jewish community in Rockland County, NY. Offering Shabbat services, Torah study, music programs, religious school, and community events.",
-  url: "https://tbs-rockland.vercel.app",
+  url: "https://tbsrockland.org",
   telephone: "(845) 638-0770",
   address: {
     "@type": "PostalAddress",

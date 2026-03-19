@@ -58,7 +58,7 @@ export default function JoinDonatePage() {
           src="/images/shabbat/shabbat-6642.jpg"
           alt="Community members gathered at Temple Beth Sholom"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_65%] sm:object-[center_60%]"
           priority
           sizes="100vw"
         />
@@ -217,7 +217,7 @@ export default function JoinDonatePage() {
           src="/images/shabbat/shabbat-6926.jpg"
           alt="A warm moment during services at Temple Beth Sholom"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_65%] sm:object-[center_60%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-tbs-blue-900/30" />
@@ -330,7 +330,7 @@ export default function JoinDonatePage() {
           src="/images/shabbat/shabbat-6805.jpg"
           alt="Community members sharing Torah during Shabbat services"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_55%] sm:object-[center_50%] md:object-[center_45%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-tbs-blue-900/90 to-tbs-blue-800/80" />

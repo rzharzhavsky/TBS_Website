@@ -14,14 +14,29 @@ export const metadata: Metadata = {
 
 const GALLERY_IMAGES = [
   {
+    src: "/images/gallery/IMG_3634.JPG",
+    alt: "Rabbi Doug holding the Torah scroll with a child and community members in the sanctuary with colorful mural backdrop",
+    category: "Shabbat",
+  },
+  {
+    src: "/images/events/High holidays.JPG",
+    alt: "Cantor Anna leading the choir in white robes during High Holiday services",
+    category: "Holidays",
+  },
+  {
     src: "/images/shabbat/candle-lighting.jpg",
     alt: "A couple lights Shabbat candles together at Temple Beth Sholom",
     category: "Shabbat",
   },
   {
-    src: "/images/holidays/choir-performance.jpg",
-    alt: "The TBS choir performing during a holiday celebration",
+    src: "/images/events/Tezza-6405.JPG",
+    alt: "Cantor Anna smiling warmly with guitar surrounded by children",
     category: "Music",
+  },
+  {
+    src: "/images/events/IMG_6376.jpg",
+    alt: "Community gathered outdoors for Hanukkah menorah lighting with guitar",
+    category: "Holidays",
   },
   {
     src: "/images/shabbat/service-bimah.jpg",
@@ -29,9 +44,19 @@ const GALLERY_IMAGES = [
     category: "Shabbat",
   },
   {
-    src: "/images/holidays/rabbi-podium.jpg",
-    alt: "Rabbi Doug speaking from the podium during a holiday service",
-    category: "Holidays",
+    src: "/images/events/IMG_3633.jpg",
+    alt: "Rabbi Doug smiling warmly while holding the Torah scroll",
+    category: "Shabbat",
+  },
+  {
+    src: "/images/events/IMG_3370.JPG",
+    alt: "Cantor Anna in a sparkly outfit with top hat performing at Broadway Shabbat",
+    category: "Music",
+  },
+  {
+    src: "/images/community/6c35b0d5-57cf-48eb-ac7f-a526f10c9b8c.JPG",
+    alt: "TBS community gathered by the lake for Tashlich with guitar player in a beautiful outdoor setting",
+    category: "Community",
   },
   {
     src: "/images/shabbat/cantor-singing.jpg",
@@ -39,8 +64,8 @@ const GALLERY_IMAGES = [
     category: "Music",
   },
   {
-    src: "/images/shabbat/torah-procession.jpg",
-    alt: "Torah procession through the congregation",
+    src: "/images/events/FullSizeRender.JPG",
+    alt: "Community members holding the Torah scroll open during a Torah unrolling ceremony",
     category: "Shabbat",
   },
   {
@@ -49,13 +74,18 @@ const GALLERY_IMAGES = [
     category: "Community",
   },
   {
-    src: "/images/holidays/torah-reading.jpg",
-    alt: "Torah reading during a holiday service",
+    src: "/images/events/Purim/83e54496-ea5c-4c25-a100-14651aad6ac5.JPG",
+    alt: "Purim celebration with hamantaschen and festive food on display",
     category: "Holidays",
   },
   {
-    src: "/images/shabbat/shabbat-6630.jpg",
-    alt: "A moment from Friday night Shabbat services",
+    src: "/images/holidays/choir-performance.jpg",
+    alt: "The TBS choir performing during a holiday celebration",
+    category: "Music",
+  },
+  {
+    src: "/images/shabbat/torah-procession.jpg",
+    alt: "Torah procession through the congregation",
     category: "Shabbat",
   },
   {
@@ -64,8 +94,8 @@ const GALLERY_IMAGES = [
     category: "Holidays",
   },
   {
-    src: "/images/shabbat/shabbat-6790.jpg",
-    alt: "A joyful moment during Shabbat at Temple Beth Sholom",
+    src: "/images/shabbat/shabbat-6630.jpg",
+    alt: "A moment from Friday night Shabbat services",
     category: "Shabbat",
   },
   {
@@ -84,7 +114,7 @@ export default function GalleryPage() {
           src="/images/holidays/holidays-6621.jpg"
           alt="Temple Beth Sholom community gathered for a celebration"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_40%] sm:object-[center_30%] md:object-[center_25%]"
           priority
           sizes="100vw"
         />
@@ -131,7 +161,7 @@ export default function GalleryPage() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%] group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -152,7 +182,7 @@ export default function GalleryPage() {
           src="/images/clergy/team-photo.jpg"
           alt="The Temple Beth Sholom clergy and staff team"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-tbs-blue-900/30" />
@@ -182,7 +212,7 @@ export default function GalleryPage() {
               Follow on Facebook
             </a>
             <a
-              href="https://www.instagram.com/tbs.rockland/"
+              href="https://www.instagram.com/rockland.tbs/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full border-2 border-tbs-blue-600 text-tbs-blue-600 hover:bg-tbs-blue-600 hover:text-white transition-all duration-300"

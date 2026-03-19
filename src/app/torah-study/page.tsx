@@ -26,10 +26,10 @@ export default function TorahStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center overflow-hidden">
         <Image
-          src="/images/holidays/holidays-7302.jpg"
-          alt="Torah study and learning at Temple Beth Sholom"
+          src="/images/events/shabbat high holidays rabbi.JPG"
+          alt="Rabbi Doug at the podium with beautiful colorful mosaic tapestry behind him"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
           priority
           sizes="100vw"
         />
@@ -167,10 +167,10 @@ export default function TorahStudyPage() {
       {/* CTA */}
       <section className="relative py-16 md:py-24 overflow-hidden">
         <Image
-          src="/images/holidays/rabbi-podium.jpg"
-          alt="Rabbi Doug teaching at the podium"
+          src="/images/events/FullSizeRender.JPG"
+          alt="Community members holding the Torah scroll open during a Torah unrolling ceremony"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_50%] sm:object-[center_45%] md:object-[center_40%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-tbs-blue-900/90 to-tbs-blue-800/80" />

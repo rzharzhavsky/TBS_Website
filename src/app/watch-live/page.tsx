@@ -23,7 +23,7 @@ export default function WatchLivePage() {
           src="/images/shabbat/shabbat-6818.jpg"
           alt="Congregation gathered for Shabbat services at Temple Beth Sholom"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
           priority
           sizes="100vw"
         />
@@ -56,6 +56,90 @@ export default function WatchLivePage() {
               Watch on Facebook
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Facebook Live Embed */}
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-4xl px-5 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">
+              Watch Now
+            </p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-4">
+              Live from TBS
+            </h2>
+            <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+              When Temple Beth Sholom goes live on Facebook, the stream will
+              appear here automatically. Between services, you can browse our
+              recent videos below.
+            </p>
+          </div>
+
+          <div className="bg-warm-50 rounded-2xl border border-warm-200 p-4 sm:p-6">
+            <div className="flex justify-center">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTBSNewCityNY&tabs=videos&width=560&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false"
+                className="w-full border-0"
+                height="500"
+                style={{ overflow: "hidden" }}
+                scrolling="no"
+                frameBorder="0"
+                allowFullScreen
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                title="TBS Facebook Live"
+              />
+            </div>
+            <p className="text-center text-gray-400 text-sm mt-4">
+              If the player does not load, you can{" "}
+              <a
+                href={SOCIAL.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-tbs-blue-600 underline hover:text-tbs-blue-800 transition-colors"
+              >
+                watch directly on Facebook
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* YouTube Section */}
+      <section className="py-16 md:py-20 bg-warm-50">
+        <div className="mx-auto max-w-4xl px-5 sm:px-6 lg:px-8 text-center">
+          <div className="w-14 h-14 rounded-full bg-[#FF0000]/10 flex items-center justify-center mx-auto mb-6">
+            <svg
+              className="w-7 h-7 text-[#FF0000]"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-4">
+            Watch Past Services on YouTube
+          </h2>
+          <p className="text-lg text-gray-500 max-w-xl mx-auto mb-8">
+            Missed a service? Catch up on past Shabbat services, High Holiday
+            worship, concerts, and more on our YouTube channel.
+          </p>
+          <a
+            href="https://www.youtube.com/@tbsrockland"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-[#FF0000] text-white hover:bg-[#cc0000] transition-all duration-300 shadow-lg"
+          >
+            <svg
+              className="w-5 h-5 mr-2"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+            Visit Our YouTube Channel
+          </a>
         </div>
       </section>
 
@@ -180,7 +264,7 @@ export default function WatchLivePage() {
                   src="/images/shabbat/cantor-singing.jpg"
                   alt="Cantor Anna Zhar singing during a Shabbat service at Temple Beth Sholom"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-[center_40%] sm:object-[center_30%] md:object-[center_25%]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -260,7 +344,7 @@ export default function WatchLivePage() {
           src="/images/shabbat/torah-procession.jpg"
           alt="Joyful Torah procession through the congregation at TBS"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_55%] sm:object-[center_50%] md:object-[center_45%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-tbs-blue-900/90 to-tbs-blue-800/80" />

@@ -51,4 +51,10 @@ Cantor Anna is a musician with the soul of a teacher, a Cantor with the heart of
     bio: "Bio coming soon.",
     image: "/images/clergy/shanna.jpg",
   },
+  {
+    name: "Valentina",
+    title: "Behind the Scenes",
+    bio: "Bio coming soon.",
+    image: "/images/clergy/Valentina.jpg",
+  },
 ];

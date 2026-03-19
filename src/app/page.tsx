@@ -2,20 +2,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { SERVICES, SOCIAL } from "@/lib/constants";
 import { UPCOMING_EVENTS, CATEGORY_COLORS } from "@/lib/events-data";
+import { fetchCalendarEvents } from "@/lib/google-calendar";
+import HeroSlider from "@/components/HeroSlider";
 
-export default function Home() {
+export const revalidate = 3600;
+
+export default async function Home() {
+  const calendarEvents = await fetchCalendarEvents(3);
+  const events = calendarEvents ?? UPCOMING_EVENTS.slice(0, 3);
   return (
     <>
       {/* Hero */}
       <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center overflow-hidden">
-        <Image
-          src="/images/shabbat/baby-naming.jpg"
-          alt="A family celebrates under the chuppah at Temple Beth Sholom"
-          fill
-          className="object-cover object-top"
-          priority
-          sizes="100vw"
-        />
+        <HeroSlider />
         <div className="hero-overlay absolute inset-0" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-20 md:py-32 w-full">
@@ -108,7 +107,7 @@ export default function Home() {
                   src="/images/clergy/team-photo.jpg"
                   alt="The Temple Beth Sholom clergy and staff team smiling together"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -133,7 +132,7 @@ export default function Home() {
           {/* Desktop: 3-col mosaic, Mobile: 2-col simple grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
             <Link href="/worship" className="group relative aspect-[3/4] md:aspect-[3/5] rounded-2xl overflow-hidden md:row-span-2">
-              <Image src="/images/shabbat/candle-lighting.jpg" alt="A couple lights Shabbat candles together under the chuppah" fill className="object-cover object-center transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
+              <Image src="/images/shabbat/candle-lighting.jpg" alt="A couple lights Shabbat candles together under the chuppah" fill className="object-cover object-[center_65%] sm:object-[center_60%] transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
                 <h3 className="text-white text-lg md:text-2xl font-bold font-[family-name:var(--font-heading)] group-hover:text-tbs-gold-300 transition-colors">Worship &amp; Shabbat</h3>
@@ -142,7 +141,7 @@ export default function Home() {
             </Link>
 
             <Link href="/torah-study" className="group relative aspect-square rounded-2xl overflow-hidden">
-              <Image src="/images/holidays/rabbi-podium.jpg" alt="Rabbi Doug speaks from the podium with a colorful tapestry in the background" fill className="object-cover object-center transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
+              <Image src="/images/holidays/rabbi-podium.jpg" alt="Rabbi Doug speaks from the podium with a colorful tapestry in the background" fill className="object-cover object-[center_40%] sm:object-[center_30%] md:object-[center_25%] transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
                 <h3 className="text-white text-base md:text-xl font-bold font-[family-name:var(--font-heading)] group-hover:text-tbs-gold-300 transition-colors">Torah Study</h3>
@@ -151,7 +150,7 @@ export default function Home() {
             </Link>
 
             <Link href="/music-community" className="group relative aspect-square rounded-2xl overflow-hidden">
-              <Image src="/images/holidays/choir-performance.jpg" alt="The TBS choir performs on stage during High Holiday services" fill className="object-cover object-top transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
+              <Image src="/images/holidays/choir-performance.jpg" alt="The TBS choir performs on stage during High Holiday services" fill className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%] transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
                 <h3 className="text-white text-base md:text-xl font-bold font-[family-name:var(--font-heading)] group-hover:text-tbs-gold-300 transition-colors">Music &amp; Choir</h3>
@@ -160,7 +159,7 @@ export default function Home() {
             </Link>
 
             <Link href="/events" className="group relative aspect-square rounded-2xl overflow-hidden">
-              <Image src="/images/holidays/holidays-7667.jpg" alt="A young person blows the shofar during High Holiday services" fill className="object-cover object-center transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
+              <Image src="/images/holidays/holidays-7667.jpg" alt="A young person blows the shofar during High Holiday services" fill className="object-cover object-[center_40%] sm:object-[center_30%] md:object-[center_25%] transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
                 <h3 className="text-white text-base md:text-xl font-bold font-[family-name:var(--font-heading)] group-hover:text-tbs-gold-300 transition-colors">High Holidays</h3>
@@ -169,7 +168,7 @@ export default function Home() {
             </Link>
 
             <Link href="/religious-school" className="group relative aspect-square rounded-2xl overflow-hidden">
-              <Image src="/images/holidays/holidays-7249.jpg" alt="Young people sing together on the bimah during services" fill className="object-cover object-top transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
+              <Image src="/images/holidays/holidays-7249.jpg" alt="Young people sing together on the bimah during services" fill className="object-cover object-[center_45%] sm:object-[center_40%] md:object-[center_35%] transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
                 <h3 className="text-white text-base md:text-xl font-bold font-[family-name:var(--font-heading)] group-hover:text-tbs-gold-300 transition-colors">Next Generation</h3>
@@ -199,7 +198,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {UPCOMING_EVENTS.slice(0, 3).map((event) => (
+            {events.map((event) => (
               <div key={event.id} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100">
                 <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 ${CATEGORY_COLORS[event.category]}`}>
                   {event.category}
@@ -233,7 +232,7 @@ export default function Home() {
           src="/images/holidays/holidays-7606.jpg"
           alt="Rabbi Doug and a musician blow shofars together during High Holiday services"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-tbs-blue-900/80" />
@@ -247,6 +246,43 @@ export default function Home() {
           <cite className="text-tbs-gold-300 text-lg not-italic font-medium">
             Rabbi Doug Sagal
           </cite>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="py-16 md:py-24 bg-warm-50">
+        <div className="mx-auto max-w-3xl px-5 sm:px-6 lg:px-8 text-center">
+          <div className="w-14 h-14 rounded-full bg-tbs-gold-100 flex items-center justify-center mx-auto mb-6">
+            <svg className="w-7 h-7 text-tbs-gold-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-4">
+            Stay in the Loop
+          </h2>
+          <p className="text-gray-500 text-lg mb-8 max-w-xl mx-auto">
+            Get our weekly newsletter with Shabbat times, upcoming events, and community news delivered straight to your inbox.
+          </p>
+          <form
+            action="MAILCHIMP_ACTION_URL"
+            method="POST"
+            className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+          >
+            <input
+              type="email"
+              name="EMAIL"
+              required
+              placeholder="Your email address"
+              className="flex-1 px-5 py-3.5 rounded-full border border-gray-200 bg-white text-gray-900 focus:border-tbs-blue-500 focus:ring-2 focus:ring-tbs-blue-200 outline-none transition-all text-sm"
+            />
+            <button
+              type="submit"
+              className="px-7 py-3.5 rounded-full bg-tbs-blue-700 text-white font-semibold text-sm hover:bg-tbs-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap"
+            >
+              Subscribe
+            </button>
+          </form>
+          <p className="text-gray-400 text-xs mt-4">We respect your privacy. Unsubscribe anytime.</p>
         </div>
       </section>
 
@@ -270,11 +306,12 @@ export default function Home() {
               {/* Live Instagram Embed */}
               <div className="mb-6 rounded-2xl overflow-hidden border border-gray-100">
                 <iframe
-                  src="https://www.instagram.com/tbs.rockland/embed"
+                  src="https://www.instagram.com/rockland.tbs/embed"
                   className="w-full border-0"
                   height="480"
                   scrolling="no"
-                  allowTransparency
+                  /* @ts-expect-error - lowercase HTML attribute */
+                  allowtransparency="true"
                   title="TBS Rockland Instagram Feed"
                 />
               </div>
@@ -319,7 +356,7 @@ export default function Home() {
           src="/images/shabbat/shabbat-6926.jpg"
           alt="Community members gathered together during services"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_65%] sm:object-[center_60%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-tbs-blue-900/90 to-tbs-blue-800/80" />

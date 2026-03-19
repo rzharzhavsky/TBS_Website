@@ -57,10 +57,10 @@ export default function MusicCommunityPage() {
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <Image
-          src="/images/holidays/choir-performance.jpg"
-          alt="TBS Adult Choir performing on stage with tapestry backdrop"
+          src="/images/events/IMG_3370.JPG"
+          alt="Cantor Anna in a sparkly outfit with top hat performing at Broadway Shabbat"
           fill
-          className="object-cover"
+          className="object-cover object-[center_40%] sm:object-[center_30%] md:object-[center_25%]"
           priority
         />
         <div className="hero-overlay absolute inset-0" />
@@ -111,10 +111,10 @@ export default function MusicCommunityPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/images/shabbat/cantor-singing.jpg"
-                alt="Cantor Anna leading music at keyboard during Shabbat services"
+                src="/images/events/IMG_3046.jpg"
+                alt="Cantor Anna conducting and rehearsing in the sanctuary"
                 fill
-                className="object-cover"
+                className="object-cover object-[center_40%] sm:object-[center_30%] md:object-[center_25%]"
               />
             </div>
           </div>
@@ -127,10 +127,10 @@ export default function MusicCommunityPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1">
               <Image
-                src="/images/shabbat/service-bimah.jpg"
-                alt="Musicians performing on the bimah during services"
+                src="/images/events/Tezza-6405.JPG"
+                alt="Cantor Anna smiling warmly with guitar surrounded by children"
                 fill
-                className="object-cover"
+                className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
               />
             </div>
             <div className="order-1 lg:order-2">
@@ -195,7 +195,7 @@ export default function MusicCommunityPage() {
             src="/images/holidays/rabbi-podium.jpg"
             alt="Rabbi speaking at the podium during High Holiday services"
             fill
-            className="object-cover"
+            className="object-cover object-[center_40%] sm:object-[center_30%] md:object-[center_25%]"
           />
           <div className="absolute inset-0 bg-tbs-blue-900/75" />
         </div>

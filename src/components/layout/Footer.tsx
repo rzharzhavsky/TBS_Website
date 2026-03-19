@@ -100,6 +100,41 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Newsletter Signup */}
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-8 md:py-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-left">
+              <h3 className="text-lg font-bold font-[family-name:var(--font-heading)] text-white mb-1">
+                Stay Connected
+              </h3>
+              <p className="text-blue-200 text-sm">
+                Get our weekly newsletter with service times, events, and community updates.
+              </p>
+            </div>
+            <form
+              action="MAILCHIMP_ACTION_URL"
+              method="POST"
+              className="flex flex-col sm:flex-row gap-3 w-full md:w-auto"
+            >
+              <input
+                type="email"
+                name="EMAIL"
+                required
+                placeholder="Your email address"
+                className="px-5 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-blue-300 focus:border-tbs-gold-300 focus:ring-2 focus:ring-tbs-gold-300/30 outline-none transition-all text-sm w-full md:w-72"
+              />
+              <button
+                type="submit"
+                className="px-6 py-3 rounded-full bg-tbs-gold-500 text-tbs-blue-900 font-semibold text-sm hover:bg-tbs-gold-400 transition-all duration-300 whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-blue-300">
           <p>&copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>

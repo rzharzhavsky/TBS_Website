@@ -2,7 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { UPCOMING_EVENTS, CATEGORY_COLORS } from "@/lib/events-data";
+import { fetchCalendarEvents } from "@/lib/google-calendar";
 import { CONTACT } from "@/lib/constants";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Events & Calendar",
@@ -15,7 +18,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function EventsPage() {
+export default async function EventsPage() {
+  const calendarEvents = await fetchCalendarEvents(10);
+  const events = calendarEvents ?? UPCOMING_EVENTS;
   return (
     <>
       {/* Hero */}
@@ -24,7 +29,7 @@ export default function EventsPage() {
           src="/images/holidays/holidays-7454.jpg"
           alt="Community members celebrating a holiday together at Temple Beth Sholom"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_55%] sm:object-[center_50%] md:object-[center_45%]"
           priority
           sizes="100vw"
         />
@@ -45,6 +50,26 @@ export default function EventsPage() {
         </div>
       </section>
 
+      {/* Full Calendar */}
+      <section className="py-16 md:py-28 bg-warm-50">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">
+            Stay Up to Date
+          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-10">
+            Full Calendar
+          </h2>
+          <div className="bg-white rounded-2xl p-2 sm:p-4 border border-gray-100 shadow-sm">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?src=tbscalendar5785%40gmail.com&ctz=America%2FNew_York&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0&mode=MONTH"
+              className="w-full border-0 rounded-2xl"
+              height="600"
+              title="TBS Events Calendar"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Upcoming Events */}
       <section className="py-16 md:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
@@ -55,7 +80,7 @@ export default function EventsPage() {
             Upcoming Events
           </h2>
           <div className="space-y-5">
-            {UPCOMING_EVENTS.map((event) => (
+            {events.map((event) => (
               <div
                 key={event.id}
                 className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 hover:shadow-lg transition-all duration-300"
@@ -144,10 +169,10 @@ export default function EventsPage() {
       {/* Photo break */}
       <section className="relative h-[30vh] sm:h-[40vh] md:h-[50vh] overflow-hidden">
         <Image
-          src="/images/holidays/choir-performance.jpg"
-          alt="The TBS choir performing during a holiday celebration"
+          src="/images/events/IMG_6376.jpg"
+          alt="Community gathered outdoors for Hanukkah menorah lighting with guitar"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_50%] sm:object-[center_45%] md:object-[center_40%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-tbs-blue-900/30" />
@@ -219,7 +244,7 @@ export default function EventsPage() {
           src="/images/holidays/torah-reading.jpg"
           alt="Torah reading during a holiday service at Temple Beth Sholom"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_50%] sm:object-[center_40%] md:object-[center_35%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-tbs-blue-900/90 to-tbs-blue-800/80" />
