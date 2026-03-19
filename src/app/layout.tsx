@@ -72,6 +72,8 @@ const jsonLd = {
   },
   sameAs: [
     "https://www.facebook.com/TBSNewCityNY/",
+    "https://www.instagram.com/rockland.tbs/",
+    "https://www.youtube.com/@tbsrockland",
   ],
   openingHoursSpecification: [
     {

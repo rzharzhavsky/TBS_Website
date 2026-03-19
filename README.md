@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Temple Beth Sholom - Website
+
+Official website for Temple Beth Sholom, a Reform Jewish community in Rockland County, NY.
+
+**Live site:** https://tbs-rockland.vercel.app
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Styling:** Tailwind CSS v4
+- **Language:** TypeScript
+- **Deployment:** Vercel
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Copy environment variables
+cp .env.example .env.local
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  app/              # Pages (Next.js App Router)
+    about/
+    clergy-staff/
+    contact/
+    events/
+    gallery/
+    join-donate/
+    music-community/
+    religious-school/
+    torah-study/
+    watch-live/
+    worship/
+  components/       # Reusable components
+    layout/         # Header, Footer
+    HeroSlider.tsx  # Homepage hero slider
+  lib/              # Data and utilities
+    constants.ts    # Site config, nav, contact
+    clergy-data.ts  # Staff profiles
+    events-data.ts  # Fallback event data
+    google-calendar.ts  # Google Calendar API
+public/
+  images/           # All site images
+```
 
-## Learn More
+## Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `GOOGLE_CALENDAR_API_KEY` | Google Calendar API key for live events | No (falls back to static data) |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## TODO (Requires Backend/Developer Work)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] Set up Formspree account and replace `FORM_ID` in `src/app/contact/page.tsx`
+- [ ] Set up Mailchimp and replace `MAILCHIMP_ACTION_URL` in homepage newsletter form
+- [ ] Configure Google Calendar API key in Vercel environment variables
+- [ ] Connect custom domain `tbsrockland.org`
