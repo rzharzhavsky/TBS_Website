@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "TBS Rockland - Next.js Dev",
+      "runtimeExecutable": "/Users/dannakushnir/.nvm/versions/node/v22.22.1/bin/node",
+      "runtimeArgs": ["/Users/dannakushnir/Desktop/Claude Code/tbs-rockland/node_modules/next/dist/bin/next", "dev"],
+      "port": 3000
+    }
+  ]
+}
