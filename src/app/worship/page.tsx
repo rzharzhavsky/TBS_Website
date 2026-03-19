@@ -198,12 +198,10 @@ export default function WorshipPage() {
       {/* Photo break */}
       <section className="relative h-[30vh] sm:h-[40vh] md:h-[50vh] overflow-hidden">
         <Image
-          src="/images/events/IMG_3633.jpg"
-          alt="Rabbi Doug smiling warmly while holding the Torah scroll"
+          src="/images/events/shabbat high holidays rabbi.JPG"
+          alt="Rabbi Doug speaking passionately from the podium during High Holiday services"
           fill
-          quality={100}
-          unoptimized
-          className="object-cover object-[center_40%] sm:object-[center_30%] md:object-[center_25%]"
+          className="object-cover object-[center_35%] sm:object-[center_30%] md:object-[center_25%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-tbs-blue-900/30" />

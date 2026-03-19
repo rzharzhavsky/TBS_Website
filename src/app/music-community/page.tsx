@@ -127,8 +127,8 @@ export default function MusicCommunityPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1">
               <Image
-                src="/images/events/Tezza-6405.JPG"
-                alt="Cantor Anna smiling warmly with guitar surrounded by children"
+                src="/images/events/FullSizeRender 3.JPG"
+                alt="Cantor Anna with a group of young musicians holding instruments in the sanctuary"
                 fill
                 className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
               />
@@ -192,10 +192,10 @@ export default function MusicCommunityPage() {
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/holidays/rabbi-podium.jpg"
-            alt="Rabbi speaking at the podium during High Holiday services"
+            src="/images/events/IMG_6452.JPG"
+            alt="Interfaith choir performing together in front of the Noah's Ark tapestry"
             fill
-            className="object-cover object-[center_40%] sm:object-[center_30%] md:object-[center_25%]"
+            className="object-cover object-[center_20%] sm:object-[center_18%] md:object-[center_15%]"
           />
           <div className="absolute inset-0 bg-tbs-blue-900/75" />
         </div>

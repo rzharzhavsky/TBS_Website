@@ -103,6 +103,66 @@ const GALLERY_IMAGES = [
     alt: "A holiday celebration at Temple Beth Sholom",
     category: "Holidays",
   },
+  {
+    src: "/images/events/Purim/59f7f40c-23e8-4149-8cff-0da893657357.JPG",
+    alt: "Purim Shpiel performance on stage with colorful disco backdrop and packed audience",
+    category: "Holidays",
+  },
+  {
+    src: "/images/events/Purim/17639705-f7e5-4254-a0a5-437e5eab5faf.JPG",
+    alt: "Teens performing the Purim Shpiel in costume on stage",
+    category: "Holidays",
+  },
+  {
+    src: "/images/events/Purim/6f1b094f-4a69-4f27-8a16-7e3a101aacca.JPG",
+    alt: "Face painting fun at the Purim celebration",
+    category: "Holidays",
+  },
+  {
+    src: "/images/events/Purim/ded229b0-45ba-4ef3-aaf1-249aaae69369.JPG",
+    alt: "Homemade hamantaschen and festive treats on a colorful Purim table",
+    category: "Holidays",
+  },
+  {
+    src: "/images/events/a7da2f79-8a05-4a39-8afe-6064a189e844.JPG",
+    alt: "Three smiling girls showing off their 'I love Temple Beth Sholom' hand stamps",
+    category: "Community",
+  },
+  {
+    src: "/images/events/FullSizeRender 3.JPG",
+    alt: "Cantor Anna with a group of young musicians holding instruments in the sanctuary",
+    category: "Music",
+  },
+  {
+    src: "/images/events/IMG_6420.JPG",
+    alt: "Interfaith candle lighting ceremony on the bimah with clergy and community leaders",
+    category: "Community",
+  },
+  {
+    src: "/images/events/IMG_9809.JPEG",
+    alt: "Cantor Anna conducting the TBS choir during a spirited service",
+    category: "Music",
+  },
+  {
+    src: "/images/events/IMG_9520.JPEG",
+    alt: "Community members studying the open Torah scroll together",
+    category: "Shabbat",
+  },
+  {
+    src: "/images/events/IMG_6452.JPG",
+    alt: "Interfaith choir performing together in front of the Noah's Ark tapestry",
+    category: "Community",
+  },
+  {
+    src: "/images/events/ec3fac7c-f407-4a35-bba2-b9a6f03b8742.JPG",
+    alt: "Families and friends gathered outdoors for a community celebration",
+    category: "Community",
+  },
+  {
+    src: "/images/events/shabbat high holidays rabbi.JPG",
+    alt: "Rabbi Doug speaking from the podium during High Holiday services",
+    category: "Shabbat",
+  },
 ];
 
 export default function GalleryPage() {

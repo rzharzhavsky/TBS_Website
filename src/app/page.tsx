@@ -102,12 +102,12 @@ export default async function Home() {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <div className="relative aspect-[4/3] sm:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/clergy/team-photo.jpg"
                   alt="The Temple Beth Sholom clergy and staff team smiling together"
                   fill
-                  className="object-cover object-[center_25%] sm:object-[center_20%] md:object-[center_15%]"
+                  className="object-cover object-[center_30%] sm:object-[center_28%] md:object-[center_25%]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -132,7 +132,7 @@ export default async function Home() {
           {/* Desktop: 3-col mosaic, Mobile: 2-col simple grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
             <Link href="/worship" className="group relative aspect-[3/4] md:aspect-[3/5] rounded-2xl overflow-hidden md:row-span-2">
-              <Image src="/images/shabbat/candle-lighting.jpg" alt="A couple lights Shabbat candles together under the chuppah" fill className="object-cover object-[center_65%] sm:object-[center_60%] transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
+              <Image src="/images/events/IMG_6420.JPG" alt="Interfaith candle lighting ceremony on the bimah at Temple Beth Sholom" fill className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%] transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
                 <h3 className="text-white text-lg md:text-2xl font-bold font-[family-name:var(--font-heading)] group-hover:text-tbs-gold-300 transition-colors">Worship &amp; Shabbat</h3>
@@ -141,7 +141,7 @@ export default async function Home() {
             </Link>
 
             <Link href="/torah-study" className="group relative aspect-square rounded-2xl overflow-hidden">
-              <Image src="/images/holidays/rabbi-podium.jpg" alt="Rabbi Doug speaks from the podium with a colorful tapestry in the background" fill className="object-cover object-[center_40%] sm:object-[center_30%] md:object-[center_25%] transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
+              <Image src="/images/events/shabbat high holidays rabbi.JPG" alt="Rabbi Doug speaking passionately from the podium during High Holiday services" fill className="object-cover object-[center_35%] sm:object-[center_30%] md:object-[center_25%] transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
                 <h3 className="text-white text-base md:text-xl font-bold font-[family-name:var(--font-heading)] group-hover:text-tbs-gold-300 transition-colors">Torah Study</h3>
@@ -150,7 +150,7 @@ export default async function Home() {
             </Link>
 
             <Link href="/music-community" className="group relative aspect-square rounded-2xl overflow-hidden">
-              <Image src="/images/holidays/choir-performance.jpg" alt="The TBS choir performs on stage during High Holiday services" fill className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%] transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
+              <Image src="/images/events/IMG_9809.JPEG" alt="Cantor Anna conducting the TBS choir during a spirited service" fill className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%] transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
                 <h3 className="text-white text-base md:text-xl font-bold font-[family-name:var(--font-heading)] group-hover:text-tbs-gold-300 transition-colors">Music &amp; Choir</h3>

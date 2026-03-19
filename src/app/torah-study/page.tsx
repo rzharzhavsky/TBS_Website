@@ -170,7 +170,7 @@ export default function TorahStudyPage() {
           src="/images/events/FullSizeRender.JPG"
           alt="Community members holding the Torah scroll open during a Torah unrolling ceremony"
           fill
-          className="object-cover object-[center_50%] sm:object-[center_45%] md:object-[center_40%]"
+          className="object-cover object-[center_40%] sm:object-[center_38%] md:object-[center_35%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-tbs-blue-900/90 to-tbs-blue-800/80" />

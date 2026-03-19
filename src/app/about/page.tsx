@@ -137,10 +137,10 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[480px] rounded-2xl overflow-hidden">
               <Image
-                src="/images/shabbat/candle-lighting.jpg"
-                alt="Candle lighting during a Shabbat service at Temple Beth Sholom"
+                src="/images/events/IMG_6420.JPG"
+                alt="Interfaith candle lighting ceremony on the bimah with clergy and community leaders"
                 fill
-                className="object-cover object-[center_65%] sm:object-[center_60%]"
+                className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
               />
             </div>
           </div>
@@ -197,10 +197,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative h-[420px] rounded-2xl overflow-hidden">
               <Image
-                src="/images/holidays/rabbi-podium.jpg"
-                alt="Rabbi Doug speaking from the podium during a holiday service"
+                src="/images/events/Tezza-6405.JPG"
+                alt="Cantor Anna smiling warmly with guitar surrounded by children"
                 fill
-                className="object-cover object-[center_40%] sm:object-[center_30%] md:object-[center_25%]"
+                className="object-cover object-[center_40%] sm:object-[center_35%] md:object-[center_30%]"
               />
             </div>
             <div>
@@ -297,7 +297,7 @@ export default function AboutPage() {
           src="/images/shabbat/baby-naming.jpg"
           alt="A joyful baby naming ceremony at Temple Beth Sholom"
           fill
-          className="object-cover object-[center_60%] sm:object-[center_55%]"
+          className="object-cover object-[center_50%] sm:object-[center_48%] md:object-[center_45%]"
         />
         <div className="hero-overlay absolute inset-0" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">

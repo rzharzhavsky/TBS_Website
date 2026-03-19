@@ -212,8 +212,8 @@ export default function ReligiousSchoolPage() {
 
               <div className="mt-8 aspect-[4/3] rounded-2xl overflow-hidden relative">
                 <Image
-                  src="/images/events/Tezza-6405.JPG"
-                  alt="Cantor Anna smiling warmly with guitar surrounded by children"
+                  src="/images/events/a7da2f79-8a05-4a39-8afe-6064a189e844.JPG"
+                  alt="Three smiling girls showing off their 'I love Temple Beth Sholom' hand stamps"
                   fill
                   className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -350,8 +350,8 @@ export default function ReligiousSchoolPage() {
 
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/gallery/IMG_3634.JPG"
-                alt="Rabbi Doug holding the Torah scroll with a young community member during a service"
+                src="/images/events/Purim/17639705-f7e5-4254-a0a5-437e5eab5faf.JPG"
+                alt="Teens performing the Purim Shpiel in colorful costumes on stage"
                 fill
                 className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
