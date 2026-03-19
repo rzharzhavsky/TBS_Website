@@ -107,7 +107,7 @@ export default async function Home() {
                   src="/images/clergy/team-photo.jpg"
                   alt="The Temple Beth Sholom clergy and staff team smiling together"
                   fill
-                  className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
+                  className="object-cover object-[center_25%] sm:object-[center_20%] md:object-[center_15%]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>

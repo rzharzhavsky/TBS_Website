@@ -201,7 +201,8 @@ export default function WorshipPage() {
           src="/images/events/IMG_3633.jpg"
           alt="Rabbi Doug smiling warmly while holding the Torah scroll"
           fill
-          quality={90}
+          quality={100}
+          unoptimized
           className="object-cover object-[center_40%] sm:object-[center_30%] md:object-[center_25%]"
           sizes="100vw"
         />

@@ -7,7 +7,7 @@ const SLIDES = [
   {
     src: "/images/gallery/IMG_3634.JPG",
     alt: "Rabbi Doug holding the Torah scroll with a child and community members in the sanctuary with colorful mural backdrop",
-    position: "object-[center_45%] sm:object-[center_35%] md:object-[center_30%]",
+    position: "object-[center_35%] sm:object-[center_25%] md:object-[center_20%]",
   },
   {
     src: "/images/events/IMG_6379.jpg",
@@ -17,7 +17,7 @@ const SLIDES = [
   {
     src: "/images/shabbat/cantor-singing.jpg",
     alt: "Cantor Anna Zhar singing joyfully at the keyboard during Shabbat services",
-    position: "object-[center_40%] sm:object-[center_30%] md:object-[center_25%]",
+    position: "object-[center_30%] sm:object-[center_20%] md:object-[center_15%]",
   },
   {
     src: "/images/events/Tezza-6405.JPG",
