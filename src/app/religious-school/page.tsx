@@ -64,7 +64,7 @@ export default function ReligiousSchoolPage() {
               the next generation.
             </p>
             <a
-              href={`mailto:${CONTACT.email}`}
+              href="#enrollment-form"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-white text-tbs-blue-800 hover:bg-tbs-gold-100 transition-all duration-300 shadow-lg"
             >
               Inquire About Enrollment
@@ -358,6 +358,91 @@ export default function ReligiousSchoolPage() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Enrollment Inquiry Form */}
+      <section id="enrollment-form" className="py-16 md:py-24 bg-warm-50">
+        <div className="mx-auto max-w-2xl px-5 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">Get in Touch</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-4">
+              Inquire About Enrollment
+            </h2>
+            <p className="text-gray-500 text-lg">
+              Fill out the form below and we&apos;ll be in touch soon.
+            </p>
+          </div>
+
+          <form
+            action="https://formspree.io/f/FORM_ID"
+            method="POST"
+            className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100 space-y-5"
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label htmlFor="first_name" className="block text-sm font-medium text-gray-700 mb-2">
+                  First Name *
+                </label>
+                <input
+                  type="text"
+                  id="first_name"
+                  name="first_name"
+                  required
+                  placeholder="First name"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-warm-50 text-gray-900 focus:border-tbs-blue-500 focus:ring-2 focus:ring-tbs-blue-200 outline-none transition-all"
+                />
+              </div>
+              <div>
+                <label htmlFor="last_name" className="block text-sm font-medium text-gray-700 mb-2">
+                  Last Name *
+                </label>
+                <input
+                  type="text"
+                  id="last_name"
+                  name="last_name"
+                  required
+                  placeholder="Last name"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-warm-50 text-gray-900 focus:border-tbs-blue-500 focus:ring-2 focus:ring-tbs-blue-200 outline-none transition-all"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="enroll_email" className="block text-sm font-medium text-gray-700 mb-2">
+                Email *
+              </label>
+              <input
+                type="email"
+                id="enroll_email"
+                name="email"
+                required
+                placeholder="your@email.com"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-warm-50 text-gray-900 focus:border-tbs-blue-500 focus:ring-2 focus:ring-tbs-blue-200 outline-none transition-all"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="enroll_message" className="block text-sm font-medium text-gray-700 mb-2">
+                Message *
+              </label>
+              <textarea
+                id="enroll_message"
+                name="message"
+                required
+                rows={5}
+                placeholder="Tell us about your child, their age/grade, any questions you have..."
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-warm-50 text-gray-900 focus:border-tbs-blue-500 focus:ring-2 focus:ring-tbs-blue-200 outline-none transition-all resize-vertical"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-tbs-blue-700 text-white hover:bg-tbs-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Send Inquiry
+            </button>
+          </form>
         </div>
       </section>
 
