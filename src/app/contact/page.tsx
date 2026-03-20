@@ -5,7 +5,7 @@ import { CONTACT } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Temple Beth Sholom in Rockland County, NY. Contact us about membership, religious school, events, or any questions. Located at JCC Rockland, West Nyack.",
+    "Get in touch with Temple Beth Sholom in Rockland County, NY. Contact us about membership, religious school, events, or any questions. Located at RJCC Rockland, West Nyack.",
   openGraph: {
     title: "Contact Us | Temple Beth Sholom",
     description:

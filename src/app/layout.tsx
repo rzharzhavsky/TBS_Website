@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | Temple Beth Sholom",
   },
   description:
-    "Temple Beth Sholom is a warm, vibrant Reform Jewish community in Rockland County, NY. Join us for Shabbat services, Torah study, music, and community events at JCC Rockland in West Nyack.",
+    "Temple Beth Sholom is a warm, vibrant Reform Jewish community in Rockland County, NY. Join us for Shabbat services, Torah study, music, and community events at RJCC Rockland in West Nyack.",
   keywords: [
     "Temple Beth Sholom",
     "TBS Rockland",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Temple Beth Sholom | Reform Jewish Community in Rockland County",
     description:
-      "A warm, vibrant Reform Jewish community in Rockland County, NY. Shabbat services, Torah study, music programs, and more at JCC Rockland.",
+      "A warm, vibrant Reform Jewish community in Rockland County, NY. Shabbat services, Torah study, music programs, and more at RJCC Rockland.",
     type: "website",
     locale: "en_US",
     siteName: "Temple Beth Sholom",
@@ -59,7 +59,7 @@ const jsonLd = {
   telephone: "(845) 638-0770",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "JCC Rockland, 450 W Nyack Rd",
+    streetAddress: "RJCC Rockland, 450 W Nyack Rd",
     addressLocality: "West Nyack",
     addressRegion: "NY",
     postalCode: "10994",

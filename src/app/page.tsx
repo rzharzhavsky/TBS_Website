@@ -83,7 +83,7 @@ export default async function Home() {
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
                   Temple Beth Sholom is a welcoming Reform Jewish community where people of all
-                  backgrounds come together to worship, learn, and celebrate. Based at JCC Rockland
+                  backgrounds come together to worship, learn, and celebrate. Based at RJCC Rockland
                   in West Nyack, we believe in the power of inclusivity, music, and real connection.
                 </p>
                 <p>

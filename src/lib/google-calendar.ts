@@ -64,7 +64,7 @@ export async function fetchCalendarEvents(maxResults = 10): Promise<Event[] | nu
       time: item.end?.dateTime
         ? `${formatTime(item.start.dateTime, item.start.date)} - ${formatTime(item.end.dateTime, item.end.date)}`
         : formatTime(item.start.dateTime, item.start.date),
-      location: item.location || "JCC Rockland",
+      location: item.location || "RJCC Rockland",
       description: item.description
         ? item.description.replace(/<[^>]*>/g, "").slice(0, 200)
         : "",

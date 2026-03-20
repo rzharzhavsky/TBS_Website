@@ -288,7 +288,7 @@ export default function JoinDonatePage() {
                   {
                     title: "Check by Mail",
                     description:
-                      "Send a check to our office at JCC Rockland, 450 W Nyack Rd, West Nyack, NY 10994.",
+                      "Send a check to our office at RJCC Rockland, 450 W Nyack Rd, West Nyack, NY 10994.",
                   },
                   {
                     title: "Sponsor a Shabbat Kiddush",

@@ -6,11 +6,11 @@ import { CONTACT } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Religious School",
   description:
-    "Temple Beth Sholom Religious School in Rockland County offers engaging Jewish education for children, including Hebrew, Torah, values, and B'nai Mitzvah preparation. Sunday mornings at JCC Rockland.",
+    "Temple Beth Sholom Religious School in Rockland County offers engaging Jewish education for children, including Hebrew, Torah, values, and B'nai Mitzvah preparation. Sunday mornings at RJCC Rockland.",
   openGraph: {
     title: "Religious School | Temple Beth Sholom",
     description:
-      "Jewish education for children of all ages. Sunday mornings at JCC Rockland, West Nyack, NY.",
+      "Jewish education for children of all ages. Sunday mornings at RJCC Rockland, West Nyack, NY.",
   },
 };
 
@@ -135,7 +135,7 @@ export default function ReligiousSchoolPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900 text-lg">
-                        JCC Rockland
+                        RJCC Rockland
                       </p>
                       <p className="text-gray-500">{CONTACT.fullAddress}</p>
                     </div>

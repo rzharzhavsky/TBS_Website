@@ -6,7 +6,7 @@ import { CONTACT, SITE } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About Our Community",
   description:
-    "Temple Beth Sholom is a warm, vibrant Reform Jewish congregation in Rockland County, NY. Located at JCC Rockland in West Nyack, we value inclusivity, music, community, and lifelong learning.",
+    "Temple Beth Sholom is a warm, vibrant Reform Jewish congregation in Rockland County, NY. Located at RJCC Rockland in West Nyack, we value inclusivity, music, community, and lifelong learning.",
   openGraph: {
     title: "About Our Community | Temple Beth Sholom",
     description: "A welcoming Reform Jewish congregation in Rockland County, NY. Discover our values, story, and community.",
@@ -211,7 +211,7 @@ export default function AboutPage() {
                 Our Home
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                Temple Beth Sholom is located at JCC Rockland in West Nyack, NY. Our space
+                Temple Beth Sholom is located at RJCC Rockland in West Nyack, NY. Our space
                 provides a warm and comfortable setting for worship, learning, and community
                 gatherings. We would love for you to come see it in person.
               </p>

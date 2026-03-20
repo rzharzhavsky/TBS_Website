@@ -6,11 +6,11 @@ export const SITE = {
 } as const;
 
 export const CONTACT = {
-  address: "JCC Rockland, 450 W Nyack Rd",
+  address: "RJCC Rockland, 450 W Nyack Rd",
   city: "West Nyack",
   state: "NY",
   zip: "10994",
-  fullAddress: "JCC Rockland, 450 W Nyack Rd, West Nyack, NY 10994",
+  fullAddress: "RJCC Rockland, 450 W Nyack Rd, West Nyack, NY 10994",
   phone: "(845) 638-0770",
   email: "info@tbsrockland.org",
 } as const;
@@ -27,14 +27,14 @@ export const SERVICES = {
   shabbat: {
     day: "Friday",
     time: "7:30 PM",
-    location: "JCC Rockland",
+    location: "RJCC Rockland",
     description:
       "Warm, musical, and welcoming Shabbat services open to everyone.",
   },
   torahStudy: {
     day: "Saturday",
     time: "10:00 AM",
-    location: "JCC Rockland / Zoom",
+    location: "RJCC Rockland / Zoom",
     description:
       "Join Rabbi Doug and the community as we explore the weekly Torah portion.",
   },

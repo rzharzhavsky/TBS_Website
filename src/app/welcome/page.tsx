@@ -201,7 +201,7 @@ export default function WelcomePage() {
 
           <div className="mt-10 bg-tbs-gold-50 border border-tbs-gold-200 rounded-2xl p-6 md:p-8 text-center">
             <p className="text-tbs-blue-800 text-lg font-medium font-[family-name:var(--font-heading)]">
-              We meet at JCC Rockland
+              We meet at RJCC Rockland
             </p>
             <p className="text-gray-500 mt-1">{CONTACT.fullAddress}</p>
             <p className="text-gray-500 mt-1">
