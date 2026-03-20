@@ -2,7 +2,7 @@
 
 Official website for Temple Beth Sholom, a Reform Jewish community in Rockland County, NY.
 
-**Live site:** https://tbs-rockland.vercel.app
+**Live site:** [https://tbs-rockland.vercel.app](https://tbswebsite.vercel.app/)
 
 ## Tech Stack
 
