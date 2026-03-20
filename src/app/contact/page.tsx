@@ -57,7 +57,7 @@ export default function ContactPage() {
               </h2>
 
               <form
-                action="https://formspree.io/f/FORM_ID"
+                action="https://formspree.io/f/mojkbygq"
                 method="POST"
                 className="space-y-5"
               >
