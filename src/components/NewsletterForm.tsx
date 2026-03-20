@@ -45,7 +45,7 @@ export default function NewsletterForm({ variant = "light" }: { variant?: Varian
 
       if (res.ok) {
         setStatus("success");
-        setMessage("You're subscribed! Check your inbox.");
+        setMessage("You're subscribed! Welcome to the community.");
         setEmail("");
       } else {
         setStatus("error");
