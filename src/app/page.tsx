@@ -4,6 +4,7 @@ import { SERVICES, SOCIAL } from "@/lib/constants";
 import { UPCOMING_EVENTS, CATEGORY_COLORS } from "@/lib/events-data";
 import { fetchCalendarEvents } from "@/lib/google-calendar";
 import HeroSlider from "@/components/HeroSlider";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const revalidate = 3600;
 
@@ -263,25 +264,9 @@ export default async function Home() {
           <p className="text-gray-500 text-lg mb-8 max-w-xl mx-auto">
             Get our weekly newsletter with Shabbat times, upcoming events, and community news delivered straight to your inbox.
           </p>
-          <form
-            action="https://gmail.us13.list-manage.com/subscribe/post?u=e4f5adb2ab90c5e67bd8d72a9&id=a7a578fde7&f_id=00c726eaf0"
-            method="POST"
-            className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-          >
-            <input
-              type="email"
-              name="EMAIL"
-              required
-              placeholder="Your email address"
-              className="flex-1 px-5 py-3.5 rounded-full border border-gray-200 bg-white text-gray-900 focus:border-tbs-blue-500 focus:ring-2 focus:ring-tbs-blue-200 outline-none transition-all text-sm"
-            />
-            <button
-              type="submit"
-              className="px-7 py-3.5 rounded-full bg-tbs-blue-700 text-white font-semibold text-sm hover:bg-tbs-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap"
-            >
-              Subscribe
-            </button>
-          </form>
+          <div className="max-w-md mx-auto">
+            <NewsletterForm variant="light" />
+          </div>
           <p className="text-gray-400 text-xs mt-4">We respect your privacy. Unsubscribe anytime.</p>
         </div>
       </section>

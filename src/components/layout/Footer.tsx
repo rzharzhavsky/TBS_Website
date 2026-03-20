@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SITE, CONTACT, SOCIAL, SERVICES, DONATE } from "@/lib/constants";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export default function Footer() {
   return (
@@ -112,25 +113,7 @@ export default function Footer() {
                 Get our weekly newsletter with service times, events, and community updates.
               </p>
             </div>
-            <form
-              action="https://gmail.us13.list-manage.com/subscribe/post?u=e4f5adb2ab90c5e67bd8d72a9&id=a7a578fde7&f_id=00c726eaf0"
-              method="POST"
-              className="flex flex-col sm:flex-row gap-3 w-full md:w-auto"
-            >
-              <input
-                type="email"
-                name="EMAIL"
-                required
-                placeholder="Your email address"
-                className="px-5 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-blue-300 focus:border-tbs-gold-300 focus:ring-2 focus:ring-tbs-gold-300/30 outline-none transition-all text-sm w-full md:w-72"
-              />
-              <button
-                type="submit"
-                className="px-6 py-3 rounded-full bg-tbs-gold-500 text-tbs-blue-900 font-semibold text-sm hover:bg-tbs-gold-400 transition-all duration-300 whitespace-nowrap"
-              >
-                Subscribe
-              </button>
-            </form>
+            <NewsletterForm variant="dark" />
           </div>
         </div>
       </div>
