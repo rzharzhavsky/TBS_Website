@@ -113,7 +113,6 @@ export default function ContactForm() {
           <option value="">Select a topic...</option>
           <option value="General Question">General Question</option>
           <option value="Membership">Membership</option>
-          <option value="Religious School">Religious School</option>
           <option value="B'nai Mitzvah">B&apos;nai Mitzvah</option>
           <option value="Events">Events</option>
           <option value="Donations">Donations</option>
