@@ -131,3 +131,20 @@ html {
 .image-shine:hover::after {
   transform: translateX(100%);
 }
+
+/* News ticker */
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 20s linear infinite;
+  padding: 14px 0;
+}
+
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}

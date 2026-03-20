@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/lib/constants";
+import NewsTicker from "@/components/NewsTicker";
+import tickerData from "@/content/ticker.json";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -137,6 +139,8 @@ export default function Header() {
           </nav>
         </div>
       )}
+
+      <NewsTicker data={tickerData} />
     </header>
   );
 }

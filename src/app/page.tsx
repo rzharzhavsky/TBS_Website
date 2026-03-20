@@ -33,10 +33,10 @@ export default async function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/worship"
+                href="/welcome"
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-white text-tbs-blue-800 hover:bg-tbs-gold-100 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Join Us This Friday
+                I&apos;m New Here
               </Link>
               <Link
                 href="/watch-live"
