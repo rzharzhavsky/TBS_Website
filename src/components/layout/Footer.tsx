@@ -113,7 +113,7 @@ export default function Footer() {
               </p>
             </div>
             <form
-              action="MAILCHIMP_ACTION_URL"
+              action="https://gmail.us13.list-manage.com/subscribe/post?u=e4f5adb2ab90c5e67bd8d72a9&id=a7a578fde7&f_id=00c726eaf0"
               method="POST"
               className="flex flex-col sm:flex-row gap-3 w-full md:w-auto"
             >

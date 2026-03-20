@@ -264,7 +264,7 @@ export default async function Home() {
             Get our weekly newsletter with Shabbat times, upcoming events, and community news delivered straight to your inbox.
           </p>
           <form
-            action="MAILCHIMP_ACTION_URL"
+            action="https://gmail.us13.list-manage.com/subscribe/post?u=e4f5adb2ab90c5e67bd8d72a9&id=a7a578fde7&f_id=00c726eaf0"
             method="POST"
             className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
           >
