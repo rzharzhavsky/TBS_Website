@@ -34,17 +34,17 @@ export default function Header() {
     >
       {/* Top bar with logo and CTA */}
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="flex h-16 lg:h-[72px] items-center justify-between">
+        <div className="flex h-20 lg:h-24 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0 group">
             <Image
               src="/images/logos/tbs-logo.png"
               alt="Temple Beth Sholom"
-              width={40}
-              height={40}
+              width={56}
+              height={56}
               className="rounded-full group-hover:scale-105 transition-transform duration-300"
             />
-            <span className="hidden sm:block text-[17px] font-semibold tracking-[-0.01em] font-[family-name:var(--font-heading)] text-tbs-blue-800">
+            <span className="hidden sm:block text-[21px] font-semibold tracking-[-0.01em] font-[family-name:var(--font-heading)] text-tbs-blue-800">
               Temple Beth Sholom
             </span>
           </Link>
@@ -85,14 +85,14 @@ export default function Header() {
         scrolled ? "border-gray-100" : "border-gray-100"
       }`}>
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-          <nav className="flex items-center justify-center gap-1 h-11">
+          <nav className="flex items-center justify-center gap-1 h-13">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`relative px-3.5 py-1.5 text-[13px] font-medium tracking-[0.01em] rounded-md transition-all duration-200 ${
+                  className={`relative px-3.5 py-2 text-[15px] font-medium tracking-[0.01em] rounded-md transition-all duration-200 ${
                     isActive
                       ? "text-tbs-blue-700"
                       : "text-gray-500 hover:text-tbs-blue-700"
