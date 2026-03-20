@@ -120,7 +120,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-blue-300">
-          <p>&copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
+          <p suppressHydrationWarning>&copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
           <p>A proud member of the Union for Reform Judaism</p>
         </div>
       </div>
