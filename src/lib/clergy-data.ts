@@ -42,7 +42,7 @@ Cantor Anna is a musician with the soul of a teacher, a Cantor with the heart of
   {
     name: "Tobi",
     title: "Staff",
-    bio: "Bio coming soon.",
+    bio: "It is a true honor to serve as President of Temple Beth Sholom, a community that has been a central part of my life for so many years. I have watched my children grow up here to become connected, Jewish adults. Given the exciting energy and renewed sense of purpose I see across our congregation, I feel that now is a particularly perfect and opportune time to take on this leadership role. My long-standing commitment to this community extends beyond our sanctuary. When I'm not engaged with temple life, you'll often find me on the tennis court, tending to my garden,taking walks with my dog, Henry, or just enjoying time with my family. Over the years, I've had the privilege of serving in various capacities here, whether chairing committees, creating new programs or accompanying our amazing cantor with my flute. These experiences have given me a deep appreciation for the dedication of our members, staff, and clergy, and for the vital role that TBS plays in both our Jewish life and the broader community.",
     image: "/images/clergy/tobi.jpg",
   },
   {
@@ -54,7 +54,7 @@ Cantor Anna is a musician with the soul of a teacher, a Cantor with the heart of
   {
     name: "Valentina",
     title: "Behind the Scenes",
-    bio: "Bio coming soon.",
+    bio: "Valentina was born and raised in Minsk, Belarus. She immigrated to the United States in 2005 and joined the Temple Beth Sholom Community as an Administrative Assistant in 2007 drawn to the opportunity to support a place that felt both welcoming and meaningful. Over the years Valentina became known for understanding the needs of the community, finding creative solutions and approaching every challenge with a calm, steady presence. Valentina was never afraid of taking on new responsibilities, strengthening relationships and helping to shape the systems that keep the community thriving. She eventually took the role of an Executive Director of TBS. Valentina is devoted to partnering with temple members, clergy, Board and staff to provide meaningful experiences that continue to distinguish our synagogue.",
     image: "/images/clergy/Valentina.jpg",
   },
 ];
