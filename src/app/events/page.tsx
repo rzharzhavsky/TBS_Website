@@ -212,7 +212,7 @@ export default async function EventsPage() {
               },
               {
                 title: "Religious School",
-                time: "Sundays, 9:00 AM to 12:00 PM",
+                time: "Weekly",
                 description:
                   "Engaging Jewish education for children of all ages. Hebrew, Torah, values, and community.",
                 link: "/religious-school",

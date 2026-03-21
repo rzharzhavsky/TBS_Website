@@ -140,7 +140,7 @@ export default function MusicCommunityPage() {
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed mb-8">
                 Our Children&apos;s Choir and Band add their own spark of excitement and pride.
-                Students rehearse during Religious School on Sundays, making music a natural and
+                Students rehearse during Religious School, making music a natural and
                 fun part of their Jewish learning experience. Watching our young performers sing,
                 play, and grow in confidence is one of the highlights of congregational life.
               </p>
@@ -153,7 +153,7 @@ export default function MusicCommunityPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Rehearsals: During Religious School</p>
-                    <p className="text-tbs-blue-600 font-bold text-2xl font-[family-name:var(--font-heading)]">Sunday Mornings</p>
+                    <p className="text-tbs-blue-600 font-bold text-2xl font-[family-name:var(--font-heading)]">During Religious School</p>
                   </div>
                 </div>
               </div>

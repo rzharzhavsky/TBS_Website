@@ -49,9 +49,9 @@ export const UPCOMING_EVENTS: Event[] = [
     id: "5",
     title: "Religious School",
     date: "2026-03-22",
-    time: "9:00 AM - 12:00 PM",
+    time: "Morning",
     location: "RJCC Rockland",
-    description: "Sunday morning Religious School for all ages.",
+    description: "Religious School for all ages.",
     category: "school",
   },
 ];

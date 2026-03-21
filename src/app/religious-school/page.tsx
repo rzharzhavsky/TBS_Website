@@ -6,11 +6,11 @@ import { CONTACT } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Religious School",
   description:
-    "Temple Beth Sholom Religious School in Rockland County offers engaging Jewish education for children, including Hebrew, Torah, values, and B'nai Mitzvah preparation. Sunday mornings at RJCC Rockland.",
+    "Temple Beth Sholom Religious School in Rockland County offers engaging Jewish education for children, including Hebrew, Torah, values, and B'nai Mitzvah preparation. Located at RJCC Rockland.",
   openGraph: {
     title: "Religious School | Temple Beth Sholom",
     description:
-      "Jewish education for children of all ages. Sunday mornings at RJCC Rockland, West Nyack, NY.",
+      "Jewish education for children of all ages at RJCC Rockland, West Nyack, NY.",
   },
 };
 
@@ -79,7 +79,7 @@ export default function ReligiousSchoolPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div>
               <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">
-                Sunday Mornings
+                Our Program
               </p>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-8">
                 A Warm, Engaging Jewish Education
@@ -87,31 +87,6 @@ export default function ReligiousSchoolPage() {
 
               <div className="bg-warm-50 rounded-2xl p-6 sm:p-8 mb-8 border border-warm-200">
                 <div className="space-y-5">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-tbs-gold-100 flex items-center justify-center flex-shrink-0">
-                      <svg
-                        className="w-5 h-5 text-tbs-gold-500"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900 text-lg">
-                        Sundays
-                      </p>
-                      <p className="text-tbs-blue-600 font-bold text-2xl sm:text-3xl font-[family-name:var(--font-heading)]">
-                        9:00 AM to 12:00 PM
-                      </p>
-                    </div>
-                  </div>
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-full bg-tbs-gold-100 flex items-center justify-center flex-shrink-0">
                       <svg
@@ -171,7 +146,7 @@ export default function ReligiousSchoolPage() {
               <p className="text-gray-600 text-lg leading-relaxed">
                 Our Religious School provides a nurturing environment where
                 children learn about Jewish history, traditions, Hebrew, values,
-                and community. Sunday mornings are filled with meaningful
+                and community. Our classes are filled with meaningful
                 learning, music, and friendship. Every child is seen, valued,
                 and encouraged to grow.
               </p>

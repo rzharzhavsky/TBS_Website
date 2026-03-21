@@ -52,6 +52,7 @@ export const NAV_ITEMS = [
   { label: "Events", href: "/events" },
   { label: "Watch Live", href: "/watch-live" },
   { label: "Religious School", href: "/religious-school" },
+  { label: "Teen", href: "/teen" },
   { label: "Music & Community", href: "/music-community" },
   { label: "Gallery", href: "/gallery" },
   { label: "Clergy & Staff", href: "/clergy-staff" },

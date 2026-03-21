@@ -84,15 +84,15 @@ export default function Header() {
       <div className={`hidden xl:block border-t transition-colors duration-300 ${
         scrolled ? "border-gray-100" : "border-gray-100"
       }`}>
-        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-          <nav className="flex items-center justify-center gap-1 h-13">
+        <div className="px-4 2xl:px-8">
+          <nav className="flex items-center justify-between h-12">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`relative px-3.5 py-2 text-[15px] font-medium tracking-[0.01em] rounded-md transition-all duration-200 ${
+                  className={`relative px-2.5 py-2 text-[15px] font-medium tracking-[0.01em] rounded-md transition-all duration-200 whitespace-nowrap ${
                     isActive
                       ? "text-tbs-blue-700"
                       : "text-gray-500 hover:text-tbs-blue-700"
@@ -100,7 +100,7 @@ export default function Header() {
                 >
                   {item.label}
                   {isActive && (
-                    <span className="absolute bottom-[-9px] left-1/2 -translate-x-1/2 w-5 h-[2px] bg-tbs-blue-600 rounded-full" />
+                    <span className="absolute bottom-[-8px] left-1/2 -translate-x-1/2 w-5 h-[2px] bg-tbs-blue-600 rounded-full" />
                   )}
                 </Link>
               );
