@@ -40,71 +40,34 @@ export default function WatchLivePage() {
               Join us from anywhere in the world. Our Shabbat services stream
               live every Friday evening on Facebook.
             </p>
-            <a
-              href={SOCIAL.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-white text-tbs-blue-800 hover:bg-tbs-gold-100 transition-all duration-300 shadow-lg"
-            >
-              <svg
-                className="w-5 h-5 mr-2"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-              </svg>
-              Watch on Facebook
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Facebook Live Embed */}
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-4xl px-5 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">
-              Watch Now
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-4">
-              Live from TBS
-            </h2>
-            <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-              When Temple Beth Sholom goes live on Facebook, the stream will
-              appear here automatically. Between services, you can browse our
-              recent videos below.
-            </p>
-          </div>
-
-          <div className="bg-warm-50 rounded-2xl border border-warm-200 p-4 sm:p-6">
-            <div className="flex justify-center">
-              <iframe
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTBSNewCityNY&tabs=videos&width=560&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false"
-                className="w-full border-0"
-                height="500"
-                style={{ overflow: "hidden" }}
-                scrolling="no"
-                frameBorder="0"
-                allowFullScreen
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                title="TBS Facebook Live"
-              />
-            </div>
-            <p className="text-center text-gray-400 text-sm mt-4">
-              If the player does not load, you can{" "}
+            <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href={SOCIAL.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-tbs-blue-600 underline hover:text-tbs-blue-800 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-white text-tbs-blue-800 hover:bg-tbs-gold-100 transition-all duration-300 shadow-lg"
               >
-                watch directly on Facebook
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+                Watch on Facebook
               </a>
-              .
-            </p>
+              <a
+                href="https://www.youtube.com/@TempleBethShalomrockland"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full border border-white/40 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
+              >
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                Watch on YouTube
+              </a>
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* YouTube Section */}
       <section className="py-16 md:py-20 bg-warm-50">
@@ -126,7 +89,7 @@ export default function WatchLivePage() {
             worship, concerts, and more on our YouTube channel.
           </p>
           <a
-            href="https://www.youtube.com/@tbsrockland"
+            href="https://www.youtube.com/@TempleBethShalomrockland"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-[#FF0000] text-white hover:bg-[#cc0000] transition-all duration-300 shadow-lg"
