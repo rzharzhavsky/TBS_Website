@@ -5,10 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/lib/constants";
-import NewsTicker from "@/components/NewsTicker";
-import tickerData from "@/content/ticker.json";
+import NewsTicker, { type TickerData } from "@/components/NewsTicker";
+import tickerFallback from "@/content/ticker.json";
 
-export default function Header() {
+export default function Header({ tickerData }: { tickerData?: TickerData }) {
+  const data = tickerData ?? (tickerFallback as TickerData);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
@@ -140,7 +141,7 @@ export default function Header() {
         </div>
       )}
 
-      <NewsTicker data={tickerData} />
+      <NewsTicker data={data} />
     </header>
   );
 }

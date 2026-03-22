@@ -1,5 +1,8 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { getGalleryPhotos } from "@/lib/sanity-queries";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Photo and Video Gallery",
@@ -165,7 +168,14 @@ const GALLERY_IMAGES = [
   },
 ];
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const sanityPhotos = await getGalleryPhotos();
+  const sanityMapped = sanityPhotos.map((p) => ({
+    src: p.imageUrl,
+    alt: p.category ?? 'Gallery photo',
+    category: p.category ?? 'Community',
+  }));
+  const allPhotos = [...sanityMapped, ...GALLERY_IMAGES];
   return (
     <>
       {/* Hero */}
@@ -212,7 +222,7 @@ export default function GalleryPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-            {GALLERY_IMAGES.map((image, i) => (
+            {allPhotos.map((image, i) => (
               <div
                 key={i}
                 className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer"

@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-interface TickerItem {
+export interface TickerItem {
   label: string;
   text: string;
   link?: string;
 }
 
-interface TickerData {
+export interface TickerData {
   enabled: boolean;
   items: TickerItem[];
 }

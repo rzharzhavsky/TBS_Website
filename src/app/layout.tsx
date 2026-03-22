@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/layout/Header";
+import HeaderWrapper from "@/components/layout/HeaderWrapper";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
@@ -110,8 +110,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased font-[family-name:var(--font-body)]">
-        <Header />
+      <body className="antialiased font-[family-name:var(--font-body)]" suppressHydrationWarning>
+        <HeaderWrapper />
         <main>{children}</main>
         <Footer />
       </body>

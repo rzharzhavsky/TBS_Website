@@ -1,8 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+      },
+    ],
+  },
   async redirects() {
     return [
+      { source: "/studio", destination: "/news-ticker", permanent: true },
+      { source: "/studio/", destination: "/news-ticker", permanent: true },
+      { source: "/studio/:path*", destination: "/news-ticker/:path*", permanent: true },
+
       // Old WordPress pages → new site pages
 
       // About section
