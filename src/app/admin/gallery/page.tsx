@@ -1,6 +1,12 @@
 'use client'
 
 import {useState, useEffect, useCallback} from 'react'
+import {useRouter} from 'next/navigation'
+import {
+  clearStoredGalleryToken,
+  galleryAuthHeaders,
+  getStoredGalleryToken,
+} from '@/lib/gallery-admin-client'
 
 interface GalleryPhoto {
   _id: string
@@ -10,6 +16,8 @@ interface GalleryPhoto {
 }
 
 export default function GalleryAdmin() {
+  const router = useRouter()
+  const [sessionReady, setSessionReady] = useState(false)
   const [photos, setPhotos] = useState<GalleryPhoto[]>([])
   const [loading, setLoading] = useState(true)
   const [uploading, setUploading] = useState(false)
@@ -18,17 +26,36 @@ export default function GalleryAdmin() {
   const [file, setFile] = useState<File | null>(null)
   const [message, setMessage] = useState('')
 
+  useEffect(() => {
+    if (!getStoredGalleryToken()) {
+      router.replace('/admin/gallery/login')
+      return
+    }
+    setSessionReady(true)
+  }, [router])
+
   const fetchPhotos = useCallback(async () => {
     setLoading(true)
-    const res = await fetch('/api/gallery')
+    const res = await fetch('/api/gallery', {headers: galleryAuthHeaders()})
+    if (res.status === 401) {
+      clearStoredGalleryToken()
+      router.push('/admin/gallery/login')
+      return
+    }
     const data = await res.json()
-    setPhotos(data)
+    setPhotos(Array.isArray(data) ? data : [])
     setLoading(false)
-  }, [])
+  }, [router])
 
   useEffect(() => {
+    if (!sessionReady) return
     fetchPhotos()
-  }, [fetchPhotos])
+  }, [sessionReady, fetchPhotos])
+
+  function logout() {
+    clearStoredGalleryToken()
+    router.push('/admin/gallery/login')
+  }
 
   async function handleUpload(e: React.FormEvent) {
     e.preventDefault()
@@ -42,13 +69,24 @@ export default function GalleryAdmin() {
     formData.append('title', title)
     formData.append('category', category)
 
-    const res = await fetch('/api/gallery', {method: 'POST', body: formData})
+    const res = await fetch('/api/gallery', {
+      method: 'POST',
+      headers: galleryAuthHeaders(),
+      body: formData,
+    })
     const text = await res.text()
     let data
     try {
       data = JSON.parse(text)
     } catch {
       data = {error: text || 'Server error'}
+    }
+
+    if (res.status === 401) {
+      clearStoredGalleryToken()
+      router.push('/admin/gallery/login')
+      setUploading(false)
+      return
     }
 
     if (data.success) {
@@ -70,9 +108,17 @@ export default function GalleryAdmin() {
 
     const res = await fetch('/api/gallery', {
       method: 'DELETE',
-      headers: {'Content-Type': 'application/json'},
+      headers: {
+        'Content-Type': 'application/json',
+        ...galleryAuthHeaders(),
+      },
       body: JSON.stringify({id}),
     })
+    if (res.status === 401) {
+      clearStoredGalleryToken()
+      router.push('/admin/gallery/login')
+      return
+    }
     const data = await res.json()
 
     if (data.success) {
@@ -82,10 +128,27 @@ export default function GalleryAdmin() {
     }
   }
 
+  if (!sessionReady) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center text-gray-500">
+        Checking session…
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="mx-auto max-w-4xl px-6">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Gallery Manager</h1>
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+          <h1 className="text-3xl font-bold text-gray-900">Gallery Manager</h1>
+          <button
+            type="button"
+            onClick={logout}
+            className="text-sm font-medium text-gray-600 hover:text-gray-900 underline"
+          >
+            Sign out
+          </button>
+        </div>
 
         <form onSubmit={handleUpload} className="bg-white rounded-xl p-6 shadow-sm border mb-10 space-y-4">
           <h2 className="text-xl font-semibold text-gray-800">Upload New Photo</h2>

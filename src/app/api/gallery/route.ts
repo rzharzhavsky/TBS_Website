@@ -1,7 +1,18 @@
 import {writeClient} from '@/lib/sanity-write'
 import {client} from '@/lib/sanity'
+import {getGalleryBearerToken, verifyGallerySessionValue} from '@/lib/gallery-auth'
 
-export async function GET() {
+function unauthorized() {
+  return Response.json({error: 'Unauthorized'}, {status: 401})
+}
+
+function assertGalleryAuth(request: Request): boolean {
+  const token = getGalleryBearerToken(request)
+  return verifyGallerySessionValue(token)
+}
+
+export async function GET(request: Request) {
+  if (!assertGalleryAuth(request)) return unauthorized()
   const photos = await client.fetch(
     `*[_type == "galleryPhoto"] | order(_createdAt desc) { _id, title, "imageUrl": image.asset->url, category }`,
   )
@@ -9,6 +20,7 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  if (!assertGalleryAuth(request)) return unauthorized()
   const token = process.env.SANITY_WRITE_TOKEN
   if (!token) {
     return Response.json({error: 'Server not configured for writes'}, {status: 500})
@@ -49,6 +61,7 @@ export async function POST(request: Request) {
 }
 
 export async function DELETE(request: Request) {
+  if (!assertGalleryAuth(request)) return unauthorized()
   const token = process.env.SANITY_WRITE_TOKEN
   if (!token) {
     return Response.json({error: 'Server not configured for writes'}, {status: 500})
