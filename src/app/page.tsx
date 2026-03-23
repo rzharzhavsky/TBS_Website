@@ -21,7 +21,7 @@ export default async function Home() {
         <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-20 md:py-32 w-full">
           <div className="max-w-2xl">
             <p className="text-tbs-gold-300 text-sm font-medium tracking-[0.2em] uppercase mb-6">
-              Reform Jewish Community in Rockland County, NY
+              A Reform Jewish Community in Rockland County, NY
             </p>
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-[family-name:var(--font-heading)] leading-[1.05] text-white mb-6">

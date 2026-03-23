@@ -12,11 +12,11 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <Image
-                src="/images/logos/tbs-logo.png"
+                src="/images/community/logo.PNG"
                 alt="Temple Beth Sholom"
-                width={40}
-                height={40}
-                className="rounded-full"
+                width={240}
+                height={240}
+                className="h-14 w-auto sm:h-[4.5rem] object-contain object-left"
               />
               <span className="text-lg font-bold font-[family-name:var(--font-heading)]">
                 {SITE.name}

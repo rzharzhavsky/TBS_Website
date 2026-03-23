@@ -35,19 +35,16 @@ export default function Header({ tickerData }: { tickerData?: TickerData }) {
     >
       {/* Top bar with logo and CTA */}
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="flex h-20 lg:h-24 items-center justify-between">
+        <div className="flex min-h-[4.25rem] sm:min-h-20 lg:min-h-[5.5rem] py-1.5 sm:py-2 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 shrink-0 group">
+          <Link href="/" className="flex items-center shrink-0 group">
             <Image
-              src="/images/logos/tbs-logo.png"
+              src="/images/community/logo.PNG"
               alt="Temple Beth Sholom"
-              width={56}
-              height={56}
-              className="rounded-full group-hover:scale-105 transition-transform duration-300"
+              width={320}
+              height={320}
+              className="h-14 w-auto sm:h-16 lg:h-20 object-contain object-left group-hover:scale-[1.02] transition-transform duration-300"
             />
-            <span className="hidden sm:block text-[21px] font-semibold tracking-[-0.01em] font-[family-name:var(--font-heading)] text-tbs-blue-800">
-              Temple Beth Sholom
-            </span>
           </Link>
 
           {/* Desktop: CTA + hamburger hidden on xl */}
