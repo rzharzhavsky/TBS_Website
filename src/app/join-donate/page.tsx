@@ -49,6 +49,93 @@ const MEMBERSHIP_BENEFITS = [
   },
 ];
 
+type DonationFund = { name: string; description: string };
+
+const DONATION_FUND_CATEGORIES: { category: string; funds: DonationFund[] }[] = [
+  {
+    category: "Clergy",
+    funds: [
+      {
+        name: "Rabbi's Discretionary Fund",
+        description:
+          "Enables the Rabbi to anonymously assist families and individuals in need throughout the community.",
+      },
+      {
+        name: "Cantor's Discretionary Fund",
+        description:
+          "Enables the Cantor to anonymously assist families and individuals in need throughout the community.",
+      },
+      {
+        name: "Caring Community",
+        description:
+          "Helps congregants in time of need and is just a phone call away.",
+      },
+    ],
+  },
+  {
+    category: "Arts & Music",
+    funds: [
+      {
+        name: "Music Fund",
+        description:
+          "To help add to congregant's musical awareness and add to our ability to increase musical offerings at Temple.",
+      },
+    ],
+  },
+  {
+    category: "Education",
+    funds: [
+      {
+        name: "Howard Simons Mensch Fund",
+        description:
+          "Supports the Pre-K to 12 educational curriculum and focuses on social/ethical values through a Jewish lens and helps each and every member of the Temple community recognize the concept of the Yiddish word Mensch.",
+      },
+      {
+        name: "David Charger Fund",
+        description:
+          "In memory of David Chargar, who attended our Nursery School, to benefit the nursery school through special programs, supplies and equipment.",
+      },
+      {
+        name: "Educational Resource",
+        description:
+          "Enhance our Religious School children's education through special programs, events and projects.",
+      },
+    ],
+  },
+  {
+    category: "Temple",
+    funds: [
+      {
+        name: "Social Action",
+        description:
+          "Reaches out to the community within and beyond the Temple to ensure that TBS is an active participant in the community around it.",
+      },
+      {
+        name: "High Holy Days",
+        description: "Operating fundraiser.",
+      },
+      {
+        name: "Temple Beautification",
+        description: "Enhancement of the Temple building, sanctuary and grounds.",
+      },
+    ],
+  },
+  {
+    category: "Group",
+    funds: [
+      {
+        name: "Brotherhood Elliot Teitelbaum",
+        description:
+          "Enables Brotherhood to be wherever needed to help Temple achieve its goals.",
+      },
+      {
+        name: "General Temple Fund",
+        description: "Thank you for your generosity!",
+      },
+    ],
+  },
+];
+
 export default function JoinDonatePage() {
   return (
     <>
@@ -91,6 +178,17 @@ export default function JoinDonatePage() {
                 Make a Donation
               </a>
             </div>
+            <p className="mt-6 text-sm md:text-base text-blue-100/90 max-w-lg leading-relaxed">
+              Before you donate, please{" "}
+              <a
+                href="#donation-funds"
+                className="underline underline-offset-2 font-semibold text-white hover:text-tbs-gold-200 transition-colors"
+              >
+                scroll down to see the funds you can support
+              </a>
+              . That way you can name the right fund in PayPal&apos;s special
+              instructions or in your Zelle note.
+            </p>
           </div>
         </div>
       </section>
@@ -228,20 +326,72 @@ export default function JoinDonatePage() {
       {/* Donate */}
       <section id="donate" className="py-16 md:py-28 bg-warm-50">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">
+            Give
+          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-8">
+            Support Our Community
+          </h2>
+          <p className="text-gray-600 text-lg leading-relaxed mb-8 max-w-3xl">
+            Your generous support helps us maintain our programs, services,
+            and community activities. Every donation makes a difference and
+            helps us continue welcoming everyone who walks through our doors.
+          </p>
+
+          <div className="mb-12 rounded-2xl border border-tbs-blue-200 bg-tbs-blue-50/80 p-6 sm:p-8 max-w-3xl">
+            <h3 className="text-lg font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-3">
+              Designating your gift
+            </h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              If you would like your donation to go to a specific fund below, please say so when you give:
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-gray-700">
+              <li>
+                <strong>PayPal:</strong> Enter the fund name in the{" "}
+                <strong>special instructions</strong> or{" "}
+                <strong>special information</strong> field (or equivalent memo) when
+                PayPal offers it.
+              </li>
+              <li>
+                <strong>Zelle:</strong> Include the fund name in the{" "}
+                <strong>note</strong> with your payment so we can direct your gift
+                correctly.
+              </li>
+            </ul>
+          </div>
+
+          <div id="donation-funds" className="mb-16 scroll-mt-28">
+            <h3 className="text-2xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-8">
+              Funds you can support
+            </h3>
+            <div className="space-y-12">
+              {DONATION_FUND_CATEGORIES.map(({ category, funds }) => (
+                <div key={category}>
+                  <p className="text-tbs-gold-600 text-xs font-semibold tracking-[0.2em] uppercase mb-5">
+                    {category}
+                  </p>
+                  <div className="grid gap-6 sm:grid-cols-2">
+                    {funds.map((fund) => (
+                      <div
+                        key={fund.name}
+                        className="rounded-2xl bg-white border border-warm-200 p-5 sm:p-6 shadow-sm"
+                      >
+                        <h4 className="font-bold text-tbs-blue-800 font-[family-name:var(--font-heading)] mb-2">
+                          {fund.name}
+                        </h4>
+                        <p className="text-gray-600 text-sm leading-relaxed">
+                          {fund.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div>
-              <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">
-                Give
-              </p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-8">
-                Support Our Community
-              </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Your generous support helps us maintain our programs, services,
-                and community activities. Every donation makes a difference and
-                helps us continue welcoming everyone who walks through our doors.
-              </p>
-
               {/* Zelle Card */}
               <div className="bg-gradient-to-br from-tbs-blue-600 to-tbs-blue-800 rounded-2xl p-6 sm:p-8 text-white shadow-xl">
                 <div className="flex items-center gap-3 mb-4">
@@ -278,6 +428,14 @@ export default function JoinDonatePage() {
                   Search for &quot;{DONATE.zelle}&quot; in your banking
                   app&apos;s Zelle feature to send a donation.
                 </p>
+                <p className="text-sm text-tbs-mint-200/95 mt-4 border-t border-white/20 pt-4">
+                  To direct your gift to a specific fund, write the{" "}
+                  <strong>fund name in the Zelle note</strong> (see{" "}
+                  <a href="#donation-funds" className="underline hover:text-white">
+                    funds above
+                  </a>
+                  ).
+                </p>
               </div>
 
               {/* PayPal */}
@@ -290,8 +448,14 @@ export default function JoinDonatePage() {
                     Donate via PayPal
                   </h3>
                 </div>
-                <p className="text-gray-500 text-sm mb-5">
+                <p className="text-gray-500 text-sm mb-3">
                   Donate securely online with your PayPal account or any major credit card.
+                </p>
+                <p className="text-gray-600 text-sm mb-5">
+                  To direct your gift to a specific fund, enter the fund name in
+                  PayPal&apos;s{" "}
+                  <strong>special instructions</strong> or{" "}
+                  <strong>special information</strong> (or memo) when it appears.
                 </p>
                 <a
                   href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K2RPMHHM47R9G&ssrt=1702484562015"
