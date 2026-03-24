@@ -274,14 +274,14 @@ export default function ReligiousSchoolPage() {
                 <p>
                   Our program blends Hebrew skills, Torah study, and personal growth. Each
                   student works closely with Rabbi Doug and Cantor Anna to prepare their
-                  Torah and Haftarah portions, and develops a meaningful community service
+                  Torah portions, and develops a meaningful community service
                   project that connects Jewish values to real-world action.
                 </p>
               </div>
 
               <div className="mt-8 space-y-3">
                 {[
-                  { text: "Personalized Torah and Haftarah preparation", detail: "One-on-one guidance with our clergy" },
+                  { text: "Personalized Torah preparation", detail: "One-on-one guidance with our clergy" },
                   { text: "Hebrew reading and prayer skills", detail: "Building confidence at every level" },
                   { text: "Community service project", detail: "Tikkun olam in action" },
                   { text: "Leading Shabbat services", detail: "A proud moment for the whole family" },
@@ -312,21 +312,12 @@ export default function ReligiousSchoolPage() {
                   </div>
                 ))}
               </div>
-
-              <div className="mt-8">
-                <a
-                  href={`mailto:${CONTACT.email}?subject=B'nai Mitzvah Inquiry`}
-                  className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-tbs-blue-700 text-white hover:bg-tbs-blue-800 transition-all duration-300 shadow-lg"
-                >
-                  Learn More About Our Program
-                </a>
-              </div>
             </div>
 
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/events/Purim/17639705-f7e5-4254-a0a5-437e5eab5faf.JPG"
-                alt="Teens performing the Purim Shpiel in colorful costumes on stage"
+                src="/images/events/BnaiMitvah.jpg"
+                alt="B&apos;nai Mitzvah celebration at Temple Beth Sholom"
                 fill
                 className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"

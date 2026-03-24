@@ -49,9 +49,6 @@ export default function WorshipPage() {
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                 Watch Live
               </Link>
-              <Link href="#schedule" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full border border-white/40 text-white hover:bg-white/10 transition-all duration-300">
-                Service Details
-              </Link>
             </div>
           </div>
         </div>
@@ -180,31 +177,9 @@ export default function WorshipPage() {
                   </div>
                 ))}
               </div>
-
-              <div className="mt-8 aspect-[4/3] rounded-2xl overflow-hidden relative">
-                <Image
-                  src="/images/events/High holidays.JPG"
-                  alt="Cantor Anna leading the choir in white robes during High Holiday services"
-                  fill
-                  className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Photo break */}
-      <section className="relative h-[30vh] sm:h-[40vh] md:h-[50vh] overflow-hidden">
-        <Image
-          src="/images/events/shabbat high holidays rabbi.JPG"
-          alt="Rabbi Doug speaking passionately from the podium during High Holiday services"
-          fill
-          className="object-cover object-[center_35%] sm:object-[center_30%] md:object-[center_25%]"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-tbs-blue-900/30" />
       </section>
 
       {/* Special Worship Experiences */}

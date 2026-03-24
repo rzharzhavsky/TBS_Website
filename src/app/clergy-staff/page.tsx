@@ -118,11 +118,8 @@ export default function ClergyStaffPage() {
         <section className="py-20 md:py-28 bg-warm-50">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">
-                Our Staff
-              </p>
               <h2 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800">
-                The People Behind the Scenes
+                Our Staff
               </h2>
             </div>
 

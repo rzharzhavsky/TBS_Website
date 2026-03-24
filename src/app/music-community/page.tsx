@@ -111,10 +111,10 @@ export default function MusicCommunityPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/images/events/IMG_3046.jpg"
-                alt="Cantor Anna conducting and rehearsing in the sanctuary"
+                src="/images/events/High holidays.JPG"
+                alt="Cantor Anna leading the choir in white robes during High Holiday services"
                 fill
-                className="object-cover object-[center_40%] sm:object-[center_30%] md:object-[center_25%]"
+                className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
               />
             </div>
           </div>
@@ -138,25 +138,12 @@ export default function MusicCommunityPage() {
               <h2 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-6">
                 Children&apos;s Choir &amp; Band
               </h2>
-              <p className="text-gray-700 text-lg leading-relaxed mb-8">
+              <p className="text-gray-700 text-lg leading-relaxed">
                 Our Children&apos;s Choir and Band add their own spark of excitement and pride.
-                Students rehearse during Religious School, making music a natural and
+                Students rehearse around the time of Religious School, making music a natural and
                 fun part of their Jewish learning experience. Watching our young performers sing,
                 play, and grow in confidence is one of the highlights of congregational life.
               </p>
-              <div className="bg-white rounded-2xl p-6 border border-gray-100">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-tbs-gold-100 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-tbs-gold-500" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">Rehearsals: During Religious School</p>
-                    <p className="text-tbs-blue-600 font-bold text-2xl font-[family-name:var(--font-heading)]">During Religious School</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
