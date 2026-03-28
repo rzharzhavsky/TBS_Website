@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SERVICES, SOCIAL } from "@/lib/constants";
-import { UPCOMING_EVENTS, CATEGORY_COLORS } from "@/lib/events-data";
+import { UPCOMING_EVENTS } from "@/lib/events-data";
 import { fetchCalendarEvents } from "@/lib/google-calendar";
 import HeroSlider from "@/components/HeroSlider";
 import NewsletterForm from "@/components/NewsletterForm";
@@ -185,7 +185,7 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-4">
             <div>
-              <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-3">Upcoming</p>
+              <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-3">Highlighted</p>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800">
                 This Week at TBS
               </h2>
@@ -201,9 +201,6 @@ export default async function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {events.map((event) => (
               <div key={event.id} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100">
-                <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 ${CATEGORY_COLORS[event.category]}`}>
-                  {event.category}
-                </span>
                 <h3 className="text-lg font-bold font-[family-name:var(--font-heading)] text-gray-900 mb-2">{event.title}</h3>
                 <p className="text-gray-500 text-sm mb-4 leading-relaxed">{event.description}</p>
                 <div className="flex items-center gap-4 text-xs text-gray-400 pt-4 border-t border-gray-100">
