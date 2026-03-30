@@ -121,9 +121,7 @@ export default function WelcomePage() {
             We&apos;re So Glad<br />You&apos;re Here
           </h1>
           <p className="text-lg md:text-xl text-blue-100/90 leading-relaxed max-w-2xl mx-auto mb-10">
-            Whether you&apos;re exploring Judaism for the first time, looking for a new
-            spiritual home, or just curious about who we are — you belong here.
-            No prerequisites, no expectations, just a warm welcome.
+          Whether you're new to Judaism, seeking a new spiritual community, or just curious about who we are, you're welcome here. This is where relationships matter.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -154,21 +152,12 @@ export default function WelcomePage() {
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100">
             <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-5">
               <p>
-                At Temple Beth Sholom, we believe that everyone deserves a place where they
-                feel seen, heard, and valued. It doesn&apos;t matter where you are in your
-                Jewish journey — or if you&apos;re just beginning to explore.
-              </p>
-              <p>
-                We are a Reform Jewish community that finds meaning in tradition while
-                embracing the world around us. Our services are filled with music, warmth,
-                and genuine connection. Our doors are open to individuals, couples, and
+                Our doors are open to individuals, couples, and
                 families of all backgrounds.
               </p>
               <p>
-                There&apos;s no right or wrong way to start. You might come to a Friday night
-                service, drop into Torah Study on a Saturday morning, or sign your kids up for
-                Religious School. However you choose to begin, we&apos;ll be here to welcome
-                you.
+              We at Temple Beth Sholom believe that every person should have a community where they are seen, heard, and valued. Wherever you are in your Jewish journey, or if you're just starting out, we want you to know that we're glad you're here. We are a Reform synagogue where tradition is important to us, but so is the world we live in. Our worship service is filled with music, warmth, and connection.
+There's no "right" or "wrong" way to get started. Maybe you'll join us at our Friday night service, maybe you'll attend Torah Study on Saturday morning, or maybe your kids are interested in Religious School. Whatever way you want to get started, we're here.
               </p>
             </div>
           </div>
