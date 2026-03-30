@@ -300,9 +300,12 @@ export default function ReligiousSchoolPage() {
 
           <div className="space-y-14">
             <article className="border-b border-warm-200 pb-14">
-              <h3 className="text-2xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-6">
+              <h3 className="text-2xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-2">
                 K-2 Program
               </h3>
+              <p className="text-base font-semibold text-tbs-blue-600 mb-6">
+                One Sunday per month
+              </p>
               <div className="text-gray-600 text-lg leading-relaxed space-y-4">
                 <p>
                   Learning about Judaism and establishing a connection to Judaism is
@@ -325,9 +328,12 @@ export default function ReligiousSchoolPage() {
             </article>
 
             <article className="border-b border-warm-200 pb-14">
-              <h3 className="text-2xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-6">
+              <h3 className="text-2xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-2">
                 3rd-5th Grade
               </h3>
+              <p className="text-base font-semibold text-tbs-blue-600 mb-6">
+                Sundays
+              </p>
               <div className="text-gray-600 text-lg leading-relaxed space-y-4">
                 <p>
                   Our student-centered program focuses on experiential learning and
@@ -392,9 +398,12 @@ export default function ReligiousSchoolPage() {
             </article>
 
             <article className="border-b border-warm-200 pb-14">
-              <h3 className="text-2xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-6">
+              <h3 className="text-2xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-2">
                 6th and 7th Grades
               </h3>
+              <p className="text-base font-semibold text-tbs-blue-600 mb-6">
+                Tuesdays
+              </p>
               <div className="text-gray-600 text-lg leading-relaxed space-y-4">
                 <p>
                   As students begin middle school, their need for Jewish learning
