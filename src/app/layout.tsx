@@ -119,7 +119,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased font-[family-name:var(--font-body)]" suppressHydrationWarning>
         <HeaderWrapper />
-        <main>{children}</main>
+        <main className="[padding-top:var(--header-height,7.5rem)]">{children}</main>
         <Footer />
       </body>
     </html>

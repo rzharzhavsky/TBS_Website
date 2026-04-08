@@ -1,6 +1,24 @@
 import {createGallerySessionValue} from '@/lib/gallery-auth'
+import {
+  clearGalleryAuthRateLimit,
+  galleryAuthRateLimitStatus,
+  getGalleryAuthClientIp,
+  recordGalleryAuthFailure,
+} from '@/lib/gallery-auth-rate-limit'
 
 export async function POST(request: Request) {
+  const clientIp = getGalleryAuthClientIp(request)
+  const {blocked, retryAfterSec} = galleryAuthRateLimitStatus(clientIp)
+  if (blocked) {
+    return Response.json(
+      {error: 'Too many attempts. Try again later.'},
+      {
+        status: 429,
+        headers: {'Retry-After': String(retryAfterSec)},
+      },
+    )
+  }
+
   const body = (await request.json()) as {password?: string}
 
   const adminPassword = process.env.GALLERY_ADMIN_PASSWORD
@@ -12,8 +30,11 @@ export async function POST(request: Request) {
   }
 
   if (typeof body.password !== 'string' || body.password !== adminPassword) {
+    recordGalleryAuthFailure(clientIp)
     return Response.json({error: 'Invalid password'}, {status: 401})
   }
+
+  clearGalleryAuthRateLimit(clientIp)
 
   let token: string
   try {
