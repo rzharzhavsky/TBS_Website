@@ -241,7 +241,7 @@ export default function AboutPage() {
           src="/images/shabbat/baby-naming.jpg"
           alt="A joyful baby naming ceremony at Temple Beth Sholom"
           fill
-          className="object-cover object-[center_50%] sm:object-[center_48%] md:object-[center_45%]"
+          className="object-cover object-[center_58%] sm:object-[center_55%] md:object-[center_62%]"
         />
         <div className="hero-overlay absolute inset-0" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
