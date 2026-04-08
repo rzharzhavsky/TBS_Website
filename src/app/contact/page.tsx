@@ -164,6 +164,14 @@ export default function ContactPage() {
                   <p className="text-white font-medium mt-4">
                     For urgent pastoral needs, please call the office and leave a message.
                   </p>
+                  <p className="pt-2">
+                    <a
+                      href="tel:8456380770"
+                      className="inline-block text-tbs-gold-300 font-semibold text-xl tracking-wide hover:text-tbs-gold-200 transition-colors"
+                    >
+                      (845) 638-0770
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>

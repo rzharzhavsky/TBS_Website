@@ -4,7 +4,7 @@ import { SERVICES, SOCIAL } from "@/lib/constants";
 import { UPCOMING_EVENTS } from "@/lib/events-data";
 import { fetchCalendarEvents } from "@/lib/google-calendar";
 import HeroSlider from "@/components/HeroSlider";
-import NewsletterForm from "@/components/NewsletterForm";
+import ConstantContactActiveForm from "@/components/ConstantContactActiveForm";
 
 export const revalidate = 3600;
 
@@ -221,6 +221,13 @@ export default async function Home() {
               </div>
             ))}
           </div>
+
+          <div className="mt-12 pt-12 border-t border-warm-200">
+            <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">
+              Stay connected
+            </p>
+            <ConstantContactActiveForm />
+          </div>
         </div>
       </section>
 
@@ -244,27 +251,6 @@ export default async function Home() {
           <cite className="text-tbs-gold-300 text-lg not-italic font-medium">
             Rabbi Doug Sagal
           </cite>
-        </div>
-      </section>
-
-      {/* Newsletter Signup */}
-      <section className="py-16 md:py-24 bg-warm-50">
-        <div className="mx-auto max-w-3xl px-5 sm:px-6 lg:px-8 text-center">
-          <div className="w-14 h-14 rounded-full bg-tbs-gold-100 flex items-center justify-center mx-auto mb-6">
-            <svg className="w-7 h-7 text-tbs-gold-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-            </svg>
-          </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-4">
-            Stay in the Loop
-          </h2>
-          <p className="text-gray-500 text-lg mb-8 max-w-xl mx-auto">
-            Get our weekly newsletter with Shabbat times, upcoming events, and community news delivered straight to your inbox.
-          </p>
-          <div className="max-w-md mx-auto">
-            <NewsletterForm variant="light" />
-          </div>
-          <p className="text-gray-400 text-xs mt-4">We respect your privacy. Unsubscribe anytime.</p>
         </div>
       </section>
 
@@ -322,9 +308,30 @@ export default async function Home() {
               <div className="bg-warm-100 rounded-2xl p-6 mb-6 border border-warm-200">
                 <p className="text-sm text-gray-500 mb-4">Listen wherever you get your podcasts:</p>
                 <div className="flex flex-wrap gap-3">
-                  <span className="px-5 py-2.5 rounded-full bg-white text-sm font-medium text-gray-700 shadow-sm">Apple Podcasts</span>
-                  <span className="px-5 py-2.5 rounded-full bg-white text-sm font-medium text-gray-700 shadow-sm">Spotify</span>
-                  <span className="px-5 py-2.5 rounded-full bg-white text-sm font-medium text-gray-700 shadow-sm">YouTube</span>
+                  <a
+                    href="https://podcasts.apple.com/us/podcast/spiritually-speaking/id1867788796"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2.5 rounded-full bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-tbs-blue-50 hover:text-tbs-blue-800 transition-colors"
+                  >
+                    Apple Podcasts
+                  </a>
+                  <a
+                    href="https://open.spotify.com/show/3jl079wnDhgpWmpJSE5f6j"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2.5 rounded-full bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-tbs-blue-50 hover:text-tbs-blue-800 transition-colors"
+                  >
+                    Spotify
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@TempleBethShalomrockland"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2.5 rounded-full bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-tbs-blue-50 hover:text-tbs-blue-800 transition-colors"
+                  >
+                    YouTube
+                  </a>
                 </div>
               </div>
             </div>

@@ -121,7 +121,7 @@ export default function WelcomePage() {
             We&apos;re So Glad<br />You&apos;re Here
           </h1>
           <p className="text-lg md:text-xl text-blue-100/90 leading-relaxed max-w-2xl mx-auto mb-10">
-          Whether you're new to Judaism, seeking a new spiritual community, or just curious about who we are, you're welcome here. This is where relationships matter.
+          Whether you're new to Jewish life, seeking a new spiritual community, or just curious about who we are, you're welcome here. This is where relationships matter.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

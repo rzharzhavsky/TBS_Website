@@ -192,7 +192,7 @@ export default function WatchLivePage() {
                     step: "1",
                     text: "Visit our Facebook page",
                     detail:
-                      "Go to facebook.com/TBSNewCityNY a few minutes before the service begins",
+                      "Go to facebook.com/TBSrockalnd a few minutes before the service begins",
                   },
                   {
                     step: "2",

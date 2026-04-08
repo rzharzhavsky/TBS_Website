@@ -182,43 +182,6 @@ export default function WorshipPage() {
         </div>
       </section>
 
-      {/* Special Worship Experiences */}
-      <section className="py-16 md:py-28 bg-warm-50">
-        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">Throughout the Year</p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-4">
-              Special Worship Experiences
-            </h2>
-            <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-              Unique and inspiring services that make each Shabbat feel special.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {[
-              { title: "Musical Shabbat", description: "An uplifting service filled with beautiful melodies and harmonies from our talented musicians and choir." },
-              { title: "Broadway Shabbat", description: "Beloved show tunes woven into our worship. A celebration of both song and spirit." },
-              { title: "Beatles Shabbat", description: "A fun, spirited Shabbat featuring the timeless music of The Beatles alongside our prayers." },
-              { title: "High Holiday Services", description: "Meaningful Rosh Hashanah and Yom Kippur services for the entire community." },
-            ].map((service) => (
-              <div key={service.title} className="group bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 hover:shadow-lg hover:border-tbs-gold-200 transition-all duration-300">
-                <h3 className="text-xl sm:text-2xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-3 group-hover:text-tbs-blue-600 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-gray-500 leading-relaxed">{service.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Link href="/events" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-tbs-blue-700 text-white hover:bg-tbs-blue-800 transition-all duration-300 shadow-lg">
-              View Upcoming Services
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="relative py-16 md:py-24 overflow-hidden">
         <Image

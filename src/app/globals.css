@@ -148,3 +148,19 @@ html {
 .ticker-track:hover {
   animation-play-state: paused;
 }
+
+/* Constant Contact Active Forms — avoid site heading font overriding CC widget */
+.ctct-inline-form-root {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: #1a1a1a;
+}
+.ctct-inline-form-root :is(h1, h2, h3, h4, h5, h6) {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ctct-inline-form-root input,
+.ctct-inline-form-root textarea,
+.ctct-inline-form-root select,
+.ctct-inline-form-root button {
+  font-family: inherit;
+}

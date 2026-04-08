@@ -118,7 +118,14 @@ export default function TorahStudyPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">Via Zoom</p>
-                      <p className="text-gray-500">Join from anywhere</p>
+                      <a
+                        href="https://us06web.zoom.us/j/81646152404"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center mt-2 px-4 py-2 rounded-full bg-tbs-blue-700 text-white text-sm font-semibold hover:bg-tbs-blue-800 transition-all duration-300 shadow-sm"
+                      >
+                        Join on Zoom
+                      </a>
                     </div>
                   </div>
                 </div>

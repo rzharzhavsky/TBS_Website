@@ -19,33 +19,6 @@ export const metadata: Metadata = {
 export default function EventsPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center overflow-hidden">
-        <Image
-          src="/images/holidays/holidays-7454.jpg"
-          alt="Community members celebrating a holiday together at Temple Beth Sholom"
-          fill
-          className="object-cover object-[center_55%] sm:object-[center_50%] md:object-[center_45%]"
-          priority
-          sizes="100vw"
-        />
-        <div className="hero-overlay absolute inset-0" />
-        <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-20 md:py-32 w-full">
-          <div className="max-w-2xl">
-            <p className="text-tbs-gold-300 text-sm font-medium tracking-[0.2em] uppercase mb-6">
-              Events
-            </p>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold font-[family-name:var(--font-heading)] leading-[1.05] text-white mb-6">
-              What&apos;s<br />Happening
-            </h1>
-            <p className="text-lg md:text-xl text-blue-100/90 leading-relaxed max-w-lg">
-              Services, celebrations, classes, and community gatherings. There is
-              always something meaningful happening at TBS.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Full Calendar */}
       <section className="py-16 md:py-28 bg-warm-50">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
@@ -86,7 +59,7 @@ export default function EventsPage() {
             {[
               {
                 title: "Friday Night Shabbat",
-                time: "Fridays at 7:30 PM",
+                time: "Fridays at 6:00 PM",
                 description:
                   "Warm, musical services led by Rabbi Doug and Cantor Anna. Open to everyone.",
                 link: "/worship",

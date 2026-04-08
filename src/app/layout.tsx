@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import HeaderWrapper from "@/components/layout/HeaderWrapper";
 import Footer from "@/components/layout/Footer";
+import { CONSTANT_CONTACT_ACTIVE_FORM_SITE_ID } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: {
@@ -71,7 +72,7 @@ const jsonLd = {
     longitude: -73.97,
   },
   sameAs: [
-    "https://www.facebook.com/TBSNewCityNY/",
+    "https://www.facebook.com/TBSrockalnd",
     "https://www.instagram.com/rockland.tbs/",
     "https://www.youtube.com/@tbsrockland",
   ],
@@ -105,6 +106,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Plain script so _ctct_m runs in initial HTML before Next chunks (CC widget needs this for submit). */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `var _ctct_m = ${JSON.stringify(CONSTANT_CONTACT_ACTIVE_FORM_SITE_ID)};`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

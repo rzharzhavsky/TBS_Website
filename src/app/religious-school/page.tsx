@@ -539,7 +539,7 @@ export default function ReligiousSchoolPage() {
           </div>
 
           <form
-            action="https://formspree.io/f/mdawrgle"
+            action="https://formspree.io/f/xpqobvkz"
             method="POST"
             className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100 space-y-5"
           >

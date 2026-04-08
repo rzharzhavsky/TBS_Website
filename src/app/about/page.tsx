@@ -80,24 +80,13 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[70vh] min-h-[520px] flex items-end overflow-hidden">
-        <Image
-          src="/images/clergy/team-photo.jpg"
-          alt="The Temple Beth Sholom clergy and staff team in front of the TBS sign"
-          fill
-          className="object-cover object-[center_45%] sm:object-[center_35%] md:object-[center_30%]"
-          priority
-        />
-        <div className="hero-overlay absolute inset-0" />
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 md:pb-20">
-          <span className="text-tbs-gold-300 text-sm font-medium tracking-[0.15em] uppercase mb-4 block">
-            About Us
-          </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-[family-name:var(--font-heading)] text-white leading-tight mb-4">
+      <section className="bg-tbs-blue-900 text-white">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-[family-name:var(--font-heading)] leading-tight mb-4">
             Our Community
           </h1>
           <p className="text-xl md:text-2xl text-white/85 max-w-2xl leading-relaxed">
-            A warm and vibrant Reform Jewish home in Rockland County.
+            {CONTACT.fullAddress}
           </p>
         </div>
       </section>
@@ -180,113 +169,68 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Photo break */}
-      <section className="relative h-[40vh] min-h-[320px] overflow-hidden">
-        <Image
-          src="/images/community/6c35b0d5-57cf-48eb-ac7f-a526f10c9b8c.JPG"
-          alt="TBS community gathered by the lake for Tashlich with guitar player in a beautiful outdoor setting"
-          fill
-          className="object-cover object-[center_50%] sm:object-[center_45%] md:object-[center_40%]"
-        />
-        <div className="hero-overlay absolute inset-0" />
-      </section>
-
-      {/* Our Home / Location */}
-      <section className="py-24 bg-warm-100">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative h-[420px] rounded-2xl overflow-hidden">
-              <Image
-                src="/images/events/Tezza-6405.JPG"
-                alt="Cantor Anna smiling warmly with guitar surrounded by children"
-                fill
-                className="object-cover object-[center_40%] sm:object-[center_35%] md:object-[center_30%]"
-              />
-            </div>
-            <div>
-              <span className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4 block">
-                Visit Us
-              </span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-6">
-                Our Home
-              </h2>
-              <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                Temple Beth Sholom is located at RJCC Rockland in West Nyack, NY. Our space
-                provides a warm and comfortable setting for worship, learning, and community
-                gatherings. We would love for you to come see it in person.
-              </p>
-              <div className="bg-white rounded-2xl p-8 border border-warm-200 space-y-4">
-                <p className="font-semibold text-tbs-blue-800 text-lg">
-                  {CONTACT.fullAddress}
-                </p>
-                <p className="text-gray-600">
-                  Phone:{" "}
-                  <a
-                    href={`tel:${CONTACT.phone}`}
-                    className="text-tbs-blue-600 hover:underline"
-                  >
-                    {CONTACT.phone}
-                  </a>
-                </p>
-                <p className="text-gray-600">
-                  Email:{" "}
-                  <a
-                    href={`mailto:${CONTACT.email}`}
-                    className="text-tbs-blue-600 hover:underline"
-                  >
-                    {CONTACT.email}
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Reform Judaism */}
+      {/* Clubs & Community Groups */}
       <section className="py-24 bg-warm-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4 block">
-                Our Movement
-              </span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-6">
-                Reform Judaism
-              </h2>
-              <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
-                <p>
-                  As a congregation of the Union for Reform Judaism, we celebrate a
-                  progressive and egalitarian approach to Jewish life. Reform Judaism embraces
-                  modernity while honoring the richness of our traditions, encouraging each
-                  individual to find personal meaning in Jewish practice.
-                </p>
-                <p>
-                  We believe in the power of informed choice, the importance of social
-                  justice, and the beauty of a Judaism that evolves with the times while
-                  staying rooted in timeless values.
-                </p>
-              </div>
-              <Link
-                href="https://urj.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center mt-8 text-tbs-blue-700 font-semibold hover:text-tbs-blue-800 transition-colors"
+          <div className="text-center mb-16">
+            <span className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4 block">
+              Get involved
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-4">
+              Clubs &amp; Community
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: "Men\u2019s Club",
+                image: "/images/MensClub.png",
+                description:
+                  "The Temple Beth Sholom Men’s Club has served our congregation for more than 60 years. We are a diverse group of men of all ages, and our mission is to serve our members, our congregation, and our community through social events, avodah (service and prayer), kehillah (community participation), and tzedakah (charity).\n\nMen’s Club member meetings include a dinner, a business meeting, a guest speaker, and activities. The Men’s Club sponsors barbecues and holds an assortment of programs throughout the year.",
+              },
+              {
+                title: "Sisterhood",
+                image: "/images/Sisterhood.png",
+                description:
+                  "The Sisterhood of Temple Beth Sholom brings together women of all ages to share their lives, careers, values, and journeys. Together we create a warm and dynamic community that supports programs to benefit the synagogue, the community, and the Jewish world at large.​\n\nSisterhood members have the opportunity to enrich their lives through personal growth and friendships, intellectual pursuits, community service, leadership development and recognition of the value of their Jewish heritage.  In addition, Sisterhood provides significant financial support to the temple by sponsoring events geared toward enriching Jewish life within the Congregation",
+              },
+              {
+                title: "Hiking Club",
+                image: "/images/Hiking.png",
+                description:
+                  "During warm months, our Shabbat Hiking club takes excursions throughout the Hudson Valley–appreciating the beauty of our area and sanctifying Shabbat with our feet.   If you are interested in join ing us on our next hike, please email Shara Abraham at sharajill@yahoo.com.",
+              },
+              {
+                title: "Mental Health Awareness Club",
+                image: "/images/MentalHealthTBS.webp",
+                description:
+                  "The TBS Cares mental health awareness task force is responsible for programming, fundraising and resource preparation related to the mental health issue within the Temple Beth Sholom community.   We encourage you to join us as we make mental health awareness a priority for Rockland’s Jewish community. ",
+              },
+            ].map((group) => (
+              <div
+                key={group.title}
+                className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-tbs-gold-200 hover:shadow-lg transition-all duration-300"
               >
-                Learn more about the URJ
-                <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </Link>
-            </div>
-            <div className="relative h-[480px] rounded-2xl overflow-hidden">
-              <Image
-                src="/images/shabbat/service-bimah.jpg"
-                alt="A service on the bimah at Temple Beth Sholom"
-                fill
-                className="object-cover object-[center_60%] sm:object-[center_55%]"
-              />
-            </div>
+                <div className="relative h-48 sm:h-52">
+                  <Image
+                    src={group.image}
+                    alt={group.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-3">
+                    {group.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed whitespace-pre-line">
+                    {group.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -1,13 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { SITE, CONTACT, SOCIAL, SERVICES, DONATE } from "@/lib/constants";
-import NewsletterForm from "@/components/NewsletterForm";
+import { SITE, CONTACT, SOCIAL, DONATE } from "@/lib/constants";
 
 export default function Footer() {
   return (
     <footer className="bg-tbs-blue-800 text-white">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
           {/* Column 1: About */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -41,11 +40,11 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-tbs-gold-300 mb-4">
               Quick Links
             </h3>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-2.5 text-sm">
               {[
                 { label: "Worship & Shabbat", href: "/worship" },
                 { label: "Torah Study", href: "/torah-study" },
-                { label: "Events Calendar", href: "/events" },
+                { label: "Calendar", href: "/events" },
                 { label: "Watch Live", href: "/watch-live" },
                 { label: "Religious School", href: "/religious-school" },
                 { label: "Music & Community", href: "/music-community" },
@@ -59,24 +58,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Service Times */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-tbs-gold-300 mb-4">
-              Service Times
-            </h3>
-            <div className="space-y-4 text-sm">
-              <div>
-                <p className="font-semibold text-white">Shabbat Services</p>
-                <p className="text-blue-200">{SERVICES.shabbat.day} at {SERVICES.shabbat.time}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-white">Torah Study</p>
-                <p className="text-blue-200">{SERVICES.torahStudy.day} at {SERVICES.torahStudy.time}</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Column 4: Connect */}
+          {/* Column 3: Connect */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-tbs-gold-300 mb-4">
               Connect With Us
@@ -97,23 +79,6 @@ export default function Footer() {
               <p className="text-sm font-semibold mb-1">Donate via Zelle</p>
               <p className="text-tbs-gold-300 font-bold text-lg">{DONATE.zelle}</p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Newsletter Signup */}
-      <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-8 md:py-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-center md:text-left">
-              <h3 className="text-lg font-bold font-[family-name:var(--font-heading)] text-white mb-1">
-                Stay Connected
-              </h3>
-              <p className="text-blue-200 text-sm">
-                Get our weekly newsletter with service times, events, and community updates.
-              </p>
-            </div>
-            <NewsletterForm variant="dark" />
           </div>
         </div>
       </div>
