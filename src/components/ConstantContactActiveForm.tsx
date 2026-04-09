@@ -1,3 +1,5 @@
+"use client";
+
 import Script from "next/script";
 import { CONSTANT_CONTACT_INLINE_FORM_ID } from "@/lib/constants";
 
@@ -10,7 +12,7 @@ const WIDGET_SRC =
  */
 export default function ConstantContactActiveForm() {
   return (
-    <div className="ctct-inline-form-root w-full max-w-xl relative z-10">
+    <div className="ctct-inline-form-root w-full max-w-xl relative z-10 min-h-[180px]">
       <div
         className="ctct-inline-form"
         data-form-id={CONSTANT_CONTACT_INLINE_FORM_ID}

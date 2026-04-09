@@ -1,16 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SERVICES, SOCIAL } from "@/lib/constants";
-import { UPCOMING_EVENTS } from "@/lib/events-data";
-import { fetchCalendarEvents } from "@/lib/google-calendar";
 import HeroSlider from "@/components/HeroSlider";
 import ConstantContactActiveForm from "@/components/ConstantContactActiveForm";
 
 export const revalidate = 3600;
 
 export default async function Home() {
-  const calendarEvents = await fetchCalendarEvents(3);
-  const events = calendarEvents ?? UPCOMING_EVENTS.slice(0, 3);
   return (
     <>
       {/* Hero */}
@@ -180,53 +176,50 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* This Week at TBS */}
+      {/* Stay Connected */}
       <section className="py-16 md:py-24 bg-warm-50">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <div>
-              <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-3">Highlighted</p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800">
-                This Week at TBS
-              </h2>
+              <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">
+                Stay connected
+              </p>
+              <ConstantContactActiveForm />
             </div>
-            <Link href="/events" className="inline-flex items-center gap-2 text-sm font-semibold text-tbs-blue-600 hover:text-tbs-blue-800 transition-colors">
-              View all events
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
-            </Link>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {events.map((event) => (
-              <div key={event.id} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100">
-                <h3 className="text-lg font-bold font-[family-name:var(--font-heading)] text-gray-900 mb-2">{event.title}</h3>
-                <p className="text-gray-500 text-sm mb-4 leading-relaxed">{event.description}</p>
-                <div className="flex items-center gap-4 text-xs text-gray-400 pt-4 border-t border-gray-100">
-                  <span className="flex items-center gap-1">
-                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    {event.time}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                    </svg>
-                    {event.location}
-                  </span>
-                </div>
+            <div className="bg-white rounded-2xl p-8 border border-warm-200 shadow-sm">
+              <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">
+                Service Times
+              </p>
+              <h2 className="text-2xl sm:text-3xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800 mb-4">
+                Services &amp; Torah Study
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Services every Friday at <span className="font-semibold text-gray-900">7:30pm</span> and Torah Study every Shabbat morning at{" "}
+                <span className="font-semibold text-gray-900">10AM</span>.
+              </p>
+              <div className="mt-6">
+                <Link
+                  href="/events"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-tbs-blue-700 hover:text-tbs-blue-900 transition-colors"
+                >
+                  View calendar
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                    />
+                  </svg>
+                </Link>
               </div>
-            ))}
-          </div>
-
-          <div className="mt-12 pt-12 border-t border-warm-200">
-            <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">
-              Stay connected
-            </p>
-            <ConstantContactActiveForm />
+            </div>
           </div>
         </div>
       </section>

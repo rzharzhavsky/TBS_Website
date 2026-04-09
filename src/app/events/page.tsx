@@ -59,7 +59,7 @@ export default function EventsPage() {
             {[
               {
                 title: "Friday Night Shabbat",
-                time: "Fridays at 6:00 PM",
+                time: "Fridays at 7:30 PM",
                 description:
                   "Warm, musical services led by Rabbi Doug and Cantor Anna. Open to everyone.",
                 link: "/worship",
