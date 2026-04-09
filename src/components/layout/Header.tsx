@@ -104,16 +104,26 @@ export default function Header({ tickerData }: { tickerData?: TickerData }) {
           </Link>
 
           {/* Desktop: CTA + hamburger hidden on xl */}
-          <div className="hidden xl:flex items-center gap-4">
+          <div className="hidden xl:flex items-center gap-2">
             <Link
-              href="/join-donate"
-              className={`px-6 py-2.5 text-[13px] font-semibold tracking-wide uppercase rounded-full transition-all duration-300 ${
-                pathname === "/join-donate"
+              href="/welcome"
+              className={`px-5 py-2.5 text-[13px] font-semibold tracking-wide uppercase rounded-full transition-all duration-300 ${
+                pathname === "/welcome"
                   ? "bg-tbs-blue-800 text-white"
                   : "bg-tbs-blue-700 text-white hover:bg-tbs-blue-800 hover:shadow-md"
               }`}
             >
-              Join / Donate
+              Join
+            </Link>
+            <Link
+              href="/donate"
+              className={`px-5 py-2.5 text-[13px] font-semibold tracking-wide uppercase rounded-full transition-all duration-300 ${
+                pathname === "/donate"
+                  ? "bg-tbs-blue-800 text-white"
+                  : "border-2 border-tbs-blue-700 text-tbs-blue-800 hover:bg-tbs-blue-50"
+              }`}
+            >
+              Donate
             </Link>
           </div>
 
@@ -193,13 +203,20 @@ export default function Header({ tickerData }: { tickerData?: TickerData }) {
                     {item.label}
                   </Link>
                 ))}
-                <div className="pt-4">
+                <div className="pt-4 flex flex-col gap-2">
                   <Link
-                    href="/join-donate"
+                    href="/welcome"
                     onClick={() => setMobileOpen(false)}
                     className="block text-center py-4 text-lg font-semibold rounded-full bg-tbs-blue-700 text-white hover:bg-tbs-blue-800 transition-colors"
                   >
-                    Join / Donate
+                    Join
+                  </Link>
+                  <Link
+                    href="/donate"
+                    onClick={() => setMobileOpen(false)}
+                    className="block text-center py-4 text-lg font-semibold rounded-full border-2 border-tbs-blue-700 text-tbs-blue-800 hover:bg-tbs-blue-50 transition-colors"
+                  >
+                    Donate
                   </Link>
                 </div>
               </nav>

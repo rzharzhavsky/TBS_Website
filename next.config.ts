@@ -33,13 +33,14 @@ const nextConfig: NextConfig = {
       { source: "/cantor", destination: "/clergy-staff", permanent: true },
       { source: "/staff", destination: "/clergy-staff", permanent: true },
 
-      // Donate / Membership
-      { source: "/aboutus/donate", destination: "/join-donate", permanent: true },
-      { source: "/aboutus/donate/", destination: "/join-donate", permanent: true },
-      { source: "/donate", destination: "/join-donate", permanent: true },
-      { source: "/membership", destination: "/join-donate", permanent: true },
-      { source: "/get-connected", destination: "/join-donate", permanent: true },
-      { source: "/get-connected/", destination: "/join-donate", permanent: true },
+      // Donate / Membership (legacy URLs)
+      { source: "/join-donate", destination: "/donate", permanent: true },
+      { source: "/join-donate/", destination: "/donate", permanent: true },
+      { source: "/aboutus/donate", destination: "/donate", permanent: true },
+      { source: "/aboutus/donate/", destination: "/donate", permanent: true },
+      { source: "/membership", destination: "/welcome", permanent: true },
+      { source: "/get-connected", destination: "/donate", permanent: true },
+      { source: "/get-connected/", destination: "/donate", permanent: true },
 
       // Worship / Prayer / Services
       { source: "/prayer", destination: "/worship", permanent: true },

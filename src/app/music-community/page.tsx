@@ -224,7 +224,7 @@ export default function MusicCommunityPage() {
             <Link href="/events" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-tbs-blue-700 text-white hover:bg-tbs-blue-800 transition-all duration-300 shadow-lg">
               View Upcoming Events
             </Link>
-            <Link href="/join-donate" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full border border-tbs-blue-200 text-tbs-blue-700 hover:bg-tbs-blue-50 transition-all duration-300">
+            <Link href="/donate" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full border border-tbs-blue-200 text-tbs-blue-700 hover:bg-tbs-blue-50 transition-all duration-300">
               Become a Member
             </Link>
           </div>
