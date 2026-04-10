@@ -30,11 +30,6 @@ const DONATION_FUND_CATEGORIES: { category: string; funds: DonationFund[] }[] = 
         description:
           "Enables the Cantor to anonymously assist families and individuals in need throughout the community.",
       },
-      {
-        name: "Caring Community",
-        description:
-          "Helps congregants in time of need and is just a phone call away.",
-      },
     ],
   },
   {
@@ -56,12 +51,7 @@ const DONATION_FUND_CATEGORIES: { category: string; funds: DonationFund[] }[] = 
           "Supports the Pre-K to 12 educational curriculum and focuses on social/ethical values through a Jewish lens and helps each and every member of the Temple community recognize the concept of the Yiddish word Mensch.",
       },
       {
-        name: "David Charger Fund",
-        description:
-          "In memory of David Chargar, who attended our Nursery School, to benefit the nursery school through special programs, supplies and equipment.",
-      },
-      {
-        name: "Educational Resource",
+        name: "Religious School Discretionary Fund",
         description:
           "Enhance our Religious School children's education through special programs, events and projects.",
       },
@@ -71,31 +61,13 @@ const DONATION_FUND_CATEGORIES: { category: string; funds: DonationFund[] }[] = 
     category: "Temple",
     funds: [
       {
+        name: "General Temple Fund",
+        description: "Thank you for your generosity!",
+      },
+      {
         name: "Social Action",
         description:
           "Reaches out to the community within and beyond the Temple to ensure that TBS is an active participant in the community around it.",
-      },
-      {
-        name: "High Holy Days",
-        description: "Operating fundraiser.",
-      },
-      {
-        name: "Temple Beautification",
-        description: "Enhancement of the Temple building, sanctuary and grounds.",
-      },
-    ],
-  },
-  {
-    category: "Group",
-    funds: [
-      {
-        name: "Brotherhood Elliot Teitelbaum",
-        description:
-          "Enables Brotherhood to be wherever needed to help Temple achieve its goals.",
-      },
-      {
-        name: "General Temple Fund",
-        description: "Thank you for your generosity!",
       },
     ],
   },
