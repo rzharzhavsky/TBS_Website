@@ -1,15 +1,16 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { CONTACT, DONATE } from "@/lib/constants";
+import ZelleQrModalButton from "@/components/ZelleQrModalButton";
 
 export const metadata: Metadata = {
   title: "Donate",
   description:
-    "Support Temple Beth Sholom, a welcoming Reform Jewish community in Rockland County, NY. Donate via Zelle (TBSRockland), PayPal, and designated funds.",
+    "Support Temple Beth Sholom, a welcoming Reform Jewish community in Rockland County, NY. Donate via Zelle (TBSRockland) and designated funds.",
   openGraph: {
     title: "Donate | Temple Beth Sholom",
     description:
-      "Support our warm Reform Jewish community. Donate via Zelle: TBSRockland or PayPal.",
+      "Support our warm Reform Jewish community. Donate via Zelle: TBSRockland.",
   },
 };
 
@@ -115,34 +116,27 @@ export default function DonatePage() {
         />
         <div className="hero-overlay absolute inset-0" />
         <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-20 md:py-32 w-full">
-          <div className="max-w-2xl">
+          <div className="max-w-3xl mx-auto text-center">
             <p className="text-tbs-gold-300 text-sm font-medium tracking-[0.2em] uppercase mb-6">
               Join and Support
             </p>
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold font-[family-name:var(--font-heading)] leading-[1.05] text-white mb-6">
               Become Part<br />of Our Family
             </h1>
-            <p className="text-lg md:text-xl text-blue-100/90 leading-relaxed mb-10 max-w-lg">
+            <p className="text-lg md:text-xl text-blue-100/90 leading-relaxed mb-10 max-w-2xl mx-auto">
               Join a warm and vibrant community where everyone belongs. Your
               membership and generosity help us thrive.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={`mailto:${CONTACT.email}`}
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-white text-tbs-blue-800 hover:bg-tbs-gold-100 transition-all duration-300 shadow-lg"
               >
                 Inquire About Membership
               </a>
-              <a
-                href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K2RPMHHM47R9G&ssrt=1702484562015"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full border border-white/40 text-white hover:bg-white/10 transition-all duration-300"
-              >
-                Make a Donation via PayPal
-              </a>
+              <ZelleQrModalButton className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full border border-white/40 text-white hover:bg-white/10 transition-all duration-300" />
             </div>
-            <p className="mt-6 text-sm md:text-base text-blue-100/90 max-w-lg leading-relaxed">
+            <p className="mt-6 text-sm md:text-base text-blue-100/90 max-w-2xl mx-auto leading-relaxed">
               Before you donate, please{" "}
               <a
                 href="#donation-funds"
@@ -150,8 +144,7 @@ export default function DonatePage() {
               >
                 scroll down to see the funds you can support
               </a>
-              . That way you can name the right fund in PayPal&apos;s special
-              instructions or in your Zelle note.
+              . That way you can include the right fund name in your Zelle note.
             </p>
           </div>
         </div>
@@ -180,12 +173,6 @@ export default function DonatePage() {
               If you would like your donation to go to a specific fund below, please say so when you give:
             </p>
             <ul className="list-disc pl-5 space-y-2 text-gray-700">
-              <li>
-                <strong>PayPal:</strong> Enter the fund name in the{" "}
-                <strong>special instructions</strong> or{" "}
-                <strong>special information</strong> field (or equivalent memo) when
-                PayPal offers it.
-              </li>
               <li>
                 <strong>Zelle:</strong> Include the fund name in the{" "}
                 <strong>note</strong> with your payment so we can direct your gift
@@ -271,37 +258,6 @@ export default function DonatePage() {
                 </p>
               </div>
 
-              {/* PayPal */}
-              <div className="mt-6 bg-warm-50 border border-warm-200 rounded-2xl p-6 sm:p-8">
-                <div className="flex items-center gap-3 mb-3">
-                  <svg className="w-7 h-7 text-[#003087]" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c1.379 2.032.982 4.617-.944 6.141-1.418 1.117-3.388 1.682-5.946 1.682H12.19c-.524 0-.968.382-1.05.9l-1.35 8.562h3.048c.458 0 .85-.334.922-.785l.038-.196.733-4.649.047-.254a.932.932 0 0 1 .922-.785h.58c3.758 0 6.699-1.527 7.559-5.945.36-1.846.174-3.389-.617-4.13z"/>
-                  </svg>
-                  <h3 className="text-xl font-bold font-[family-name:var(--font-heading)] text-tbs-blue-800">
-                    Donate via PayPal
-                  </h3>
-                </div>
-                <p className="text-gray-500 text-sm mb-3">
-                  Donate securely online with your PayPal account or any major credit card.
-                </p>
-                <p className="text-gray-600 text-sm mb-5">
-                  To direct your gift to a specific fund, enter the fund name in
-                  PayPal&apos;s{" "}
-                  <strong>special instructions</strong> or{" "}
-                  <strong>special information</strong> (or memo) when it appears.
-                </p>
-                <a
-                  href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K2RPMHHM47R9G&ssrt=1702484562015"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold rounded-full bg-[#0070ba] text-white hover:bg-[#005ea6] transition-all duration-300 shadow-md hover:shadow-lg gap-2"
-                >
-                  Donate with PayPal
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                  </svg>
-                </a>
-              </div>
           </div>
         </div>
       </section>
