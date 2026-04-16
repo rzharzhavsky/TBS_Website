@@ -181,7 +181,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
                 title: "Men\u2019s Club",
@@ -195,18 +195,6 @@ export default function AboutPage() {
                 description:
                   "The Sisterhood of Temple Beth Sholom brings together women of all ages to share their lives, careers, values, and journeys. Together we create a warm and dynamic community that supports programs to benefit the synagogue, the community, and the Jewish world at large.​\n\nSisterhood members have the opportunity to enrich their lives through personal growth and friendships, intellectual pursuits, community service, leadership development and recognition of the value of their Jewish heritage.  In addition, Sisterhood provides significant financial support to the temple by sponsoring events geared toward enriching Jewish life within the Congregation",
               },
-              {
-                title: "Hiking Club",
-                image: "/images/Hiking.png",
-                description:
-                  "During warm months, our Shabbat Hiking club takes excursions throughout the Hudson Valley–appreciating the beauty of our area and sanctifying Shabbat with our feet.   If you are interested in join ing us on our next hike, please email Shara Abraham at sharajill@yahoo.com.",
-              },
-              {
-                title: "Mental Health Awareness Club",
-                image: "/images/MentalHealthTBS.webp",
-                description:
-                  "The TBS Cares mental health awareness task force is responsible for programming, fundraising and resource preparation related to the mental health issue within the Temple Beth Sholom community.   We encourage you to join us as we make mental health awareness a priority for Rockland’s Jewish community. ",
-              },
             ].map((group) => (
               <div
                 key={group.title}
@@ -218,7 +206,7 @@ export default function AboutPage() {
                     alt={group.title}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div className="p-6">
