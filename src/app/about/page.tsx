@@ -205,7 +205,7 @@ export default function AboutPage() {
                     src={group.image}
                     alt={group.title}
                     fill
-                    className="object-cover"
+                    className="object-cover object-[center_23%]"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
