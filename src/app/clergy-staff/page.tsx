@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import JoinOurTeamModalButton from "@/components/JoinOurTeamModalButton";
 import { CLERGY, type StaffMember } from "@/lib/clergy-data";
 import { SITE } from "@/lib/constants";
 
@@ -109,9 +110,13 @@ export default function ClergyStaffPage() {
           <p className="text-tbs-gold-500 text-sm font-medium tracking-[0.15em] uppercase mb-4">
             Our Team
           </p>
-          <h1 className="text-5xl md:text-7xl font-bold font-[family-name:var(--font-heading)] text-white leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold font-[family-name:var(--font-heading)] text-white leading-tight mb-8">
             Clergy &amp; Staff
           </h1>
+          <JoinOurTeamModalButton
+            buttonLabel="Join Our Team"
+            className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-white text-tbs-blue-800 hover:bg-tbs-gold-100 transition-all duration-300 shadow-lg"
+          />
         </div>
       </section>
 
