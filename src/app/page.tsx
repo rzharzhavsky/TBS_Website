@@ -44,6 +44,17 @@ export default async function Home() {
                 </svg>
                 Watch Live
               </Link>
+              <a
+                href="https://www.youtube.com/watch?v=z7k4b1L9L38"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-tbs-gold-300 text-tbs-blue-900 hover:bg-tbs-gold-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                Watch Tonight&apos;s Service!
+              </a>
             </div>
           </div>
         </div>
