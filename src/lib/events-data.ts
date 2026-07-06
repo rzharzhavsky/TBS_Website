@@ -13,7 +13,7 @@ export const UPCOMING_EVENTS: Event[] = [
     id: "1",
     title: "Friday Night Shabbat Service",
     date: "2026-03-20",
-    time: "7:30 PM",
+    time: "7:00 PM",
     location: "RJCC Rockland",
     description: "Join us for a warm, musical Shabbat service.",
     category: "worship",

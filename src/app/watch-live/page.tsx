@@ -6,7 +6,7 @@ import { SERVICES, SOCIAL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Watch Live Services",
   description:
-    "Watch Temple Beth Sholom Shabbat services live on Facebook every Friday at 7:30 PM ET. Stream Reform Jewish worship from anywhere in the world.",
+    "Watch Temple Beth Sholom Shabbat services live on Facebook every Friday at 7:00 PM ET. Stream Reform Jewish worship from anywhere in the world.",
   openGraph: {
     title: "Watch Live | Temple Beth Sholom",
     description:

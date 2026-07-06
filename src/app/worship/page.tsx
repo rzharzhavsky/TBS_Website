@@ -6,10 +6,10 @@ import { SERVICES, CONTACT, SOCIAL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Worship & Shabbat Services",
   description:
-    "Join Temple Beth Sholom for warm, musical Shabbat services every Friday at 7:30 PM at RJCC Rockland, West Nyack, NY. Inclusive Reform Jewish worship with English and Hebrew liturgy. Watch live on Facebook.",
+    "Join Temple Beth Sholom for warm, musical Shabbat services every Friday at 7:00 PM at RJCC Rockland, West Nyack, NY. Inclusive Reform Jewish worship with English and Hebrew liturgy. Watch live on Facebook.",
   openGraph: {
     title: "Worship & Shabbat | Temple Beth Sholom",
-    description: "Friday night Shabbat services at 7:30 PM. Musical, inclusive, welcoming Reform Jewish worship in Rockland County, NY.",
+    description: "Friday night Shabbat services at 7:00 PM. Musical, inclusive, welcoming Reform Jewish worship in Rockland County, NY.",
   },
 };
 

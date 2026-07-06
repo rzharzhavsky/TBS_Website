@@ -44,17 +44,6 @@ export default async function Home() {
                 </svg>
                 Watch Live
               </Link>
-              <a
-                href="https://www.youtube.com/watch?v=z7k4b1L9L38"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full bg-tbs-gold-300 text-tbs-blue-900 hover:bg-tbs-gold-100 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-                Watch Tonight&apos;s Service!
-              </a>
             </div>
           </div>
         </div>
@@ -144,7 +133,7 @@ export default async function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
                 <h3 className="text-white text-lg md:text-2xl font-bold font-[family-name:var(--font-heading)] group-hover:text-tbs-gold-300 transition-colors">Worship &amp; Shabbat</h3>
-                <p className="text-white/70 text-sm mt-1 hidden sm:block">Friday nights at 7:30 PM</p>
+                <p className="text-white/70 text-sm mt-1 hidden sm:block">Friday nights at 7:00 PM</p>
               </div>
             </Link>
 
@@ -206,7 +195,7 @@ export default async function Home() {
                 Services &amp; Torah Study
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Services every Friday at <span className="font-semibold text-gray-900">7:30pm</span> and Torah Study every Shabbat morning at{" "}
+                Services every Friday at <span className="font-semibold text-gray-900">7:00pm</span> and Torah Study every Shabbat morning at{" "}
                 <span className="font-semibold text-gray-900">10AM</span>.
               </p>
               <div className="mt-6">

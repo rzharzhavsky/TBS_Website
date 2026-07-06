@@ -26,7 +26,7 @@ export const SOCIAL = {
 export const SERVICES = {
   shabbat: {
     day: "Friday",
-    time: "7:30 PM",
+    time: "7:00 PM",
     location: "RJCC Rockland",
     description:
       "Warm, musical, and welcoming Shabbat services open to everyone.",
