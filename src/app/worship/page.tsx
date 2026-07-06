@@ -124,6 +124,7 @@ export default function WorshipPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900 text-lg">{SERVICES.shabbat.day} Evenings</p>
+                      <p className="text-gray-500">{SERVICES.shabbat.time}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
