@@ -29,7 +29,7 @@ export async function getTickerData(): Promise<TickerData | null> {
   return client.fetch(
     `*[_type == "tickerSettings"][0]{ enabled, items }`,
     {},
-    {next: {revalidate: 300}},
+    {next: {revalidate: 3600}},
   )
 }
 
