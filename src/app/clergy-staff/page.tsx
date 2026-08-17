@@ -99,7 +99,7 @@ export default function ClergyStaffPage() {
       {/* ── Hero ── */}
       <section className="relative h-[60vh] min-h-[480px] flex items-end overflow-hidden">
         <Image
-          src="/images/clergy/team-photo.jpg"
+          src="/images/TBS_Couch_2.jpg"
           alt="The clergy and staff of Temple Beth Sholom"
           fill
           priority
